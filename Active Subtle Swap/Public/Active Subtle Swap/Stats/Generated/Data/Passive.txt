@@ -1,0 +1,12 @@
+new entry "MAG_Throw_Swap"
+type "PassiveData"
+// Subtle Swap
+data "DisplayName" "hbcd8cc21gcd24g4f92g843fg9c32bae1b542;4"
+// You gain a +[1] bonus to <LSTag Tooltip="AttackRoll">Attack Rolls</LSTag> when throwing, and may swap positions with the target if they fail a Dexterity <LSTag Tooltip="SavingThrow">Saving Throw</LSTag>.
+data "Description" "ha823a533g17adg4fa3ga6a0gdf356dc723ec"
+data "DescriptionParams" "1"
+data "Boosts" "IF(SpellTypeIs(SpellType.Throw)):RollBonus(Attack, 1)"
+data "Conditions" "not Self() and not Item()"
+data "StatsFunctorContext" "OnDamage"
+// Temporarily increase DC to 30 from 13 for testing; ideally, this uses weapon action DC, I think
+data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity,30)):ApplyStatus(SELF, ACTIVE_SUBTLE_SWAP_ENABLED, 100, 1);ApplyStatus(ACTIVE_SUBTLE_SWAP_TARGETED, 100, 1)"
