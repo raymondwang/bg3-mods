@@ -1,29 +1,29 @@
-new entry "ACTIVE_SUBTLE_SWAP_ENABLED"
+new entry "RUI_ACTIVE_SUBTLE_SWAP_ENABLED"
 type "StatusData"
 data "StatusType" "BOOST"
 // Subtle Swap
 data "DisplayName" "hbcd8cc21gcd24g4f92g843fg9c32bae1b542;4"
-// Swap positions with a target displaced by your thrown projectile.
+// Swap positions with a target affected by <LSTag Type="Status" Tooltip="RUI_ACTIVE_SUBTLE_SWAP_TARGETED">Dark Displacement</LSTag>.
 data "Description" "he177d447g975fg4ae3gb464ga66aa7b69335"
 data "Icon" "GenericIcon_Intent_Utility"
-data "Boosts" "UnlockSpell(Target_SubtleSwap);UnlockSpellVariant(SpellId('Target_SubtleSwap'),ModifyIconGlow())"
+data "Boosts" "UnlockSpell(RUI_Target_SubtleSwap); UnlockSpellVariant(SpellId('RUI_Target_SubtleSwap'), ModifyIconGlow())"
 data "OnRemoveFunctors" ""
-data "RemoveConditions" "SpellId('Target_SubtleSwap')"
+data "RemoveConditions" "SpellId('RUI_Target_SubtleSwap')"
 data "RemoveEvents" "OnSpellCast"
-data "StackId" "ACTIVE_SUBTLE_SWAP_ENABLED"
+data "StackId" "RUI_ACTIVE_SUBTLE_SWAP_ENABLED"
 data "StackType" "Ignore"
 data "TickType" "EndTurn"
-// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
 
-new entry "ACTIVE_SUBTLE_SWAP_TARGETED"
+new entry "RUI_ACTIVE_SUBTLE_SWAP_TARGETED"
 type "StatusData"
 data "StatusType" "BOOST"
 // Dark Displacement
 data "DisplayName" "hc61f7a00g7093g4492g87a1g8e307d9e4444"
-// Displaced after being hit by a thrown projectile. The thrower may swap positions with this character during their turn.
+// Displaced by <LSTag Type="Passive" Tooltip="MAG_Throw_Swap">Subtle Swap&lt;/LSTag>.
 data "Description" "ha820eb02g2cc4g4a1eg8ebdg8faac20a4a6f"
 data "Icon" "GenericIcon_Intent_Control"
-data "StackId" "ACTIVE_SUBTLE_SWAP_TARGETED"
+data "StackId" "RUI_ACTIVE_SUBTLE_SWAP_TARGETED"
 data "StackType" "Overwrite"
 data "TickType" "EndTurn"
-// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "OnApplyFunctors" "ApplyStatus(SELF, RUI_ACTIVE_SUBTLE_SWAP_ENABLED, 100, 1)"

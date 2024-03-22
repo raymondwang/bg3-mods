@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
 	<content contentuid="h477f454fgf3f0g48cag9934g58b1e62d1eb7" version="1">Activate Subtle Swap</content>
-	<content contentuid="he177d447g975fg4ae3gb464ga66aa7b69335" version="1">Swap positions with a target displaced by your &lt;LSTag Type="Spell" Tooltip="Throw_Throw"&gt;Throw&lt;/LSTag&gt;.</content>
-	<content contentuid="h8588103eg2423g4c41gaf4agc75e81d9a079" version="1">Subtle Swap Prepared</content>
+	<content contentuid="he177d447g975fg4ae3gb464ga66aa7b69335" version="1">Swap positions with a target affected by &lt;LSTag Type="Status" Tooltip="RUI_ACTIVE_SUBTLE_SWAP_TARGETED"&gt;Dark Displacement&lt;/LSTag&gt;.</content>
 	<content contentuid="hc61f7a00g7093g4492g87a1g8e307d9e4444" version="1">Dark Displacement</content>
-	<content contentuid="ha820eb02g2cc4g4a1eg8ebdg8faac20a4a6f" version="1">Displaced after being hit by a thrown projectile. The thrower may swap positions with this character.</content>
-	<content contentuid="ha823a533g17adg4fa3ga6a0gdf356dc723ec" version="1">You gain a +[1] bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; when throwing, and may swap positions with the target if they fail a Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;.</content>
+	<content contentuid="ha820eb02g2cc4g4a1eg8ebdg8faac20a4a6f" version="1">Displaced by &lt;LSTag Type="Passive" Tooltip="MAG_Throw_Swap"&gt;Subtle Swap&lt;/LSTag&gt;.</content>
 </contentList>
