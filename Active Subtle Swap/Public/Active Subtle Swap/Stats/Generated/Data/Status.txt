@@ -1,31 +1,29 @@
 new entry "ACTIVE_SUBTLE_SWAP_ENABLED"
 type "StatusData"
 data "StatusType" "BOOST"
-// Subtle Swap Prepared
-data "DisplayName" "h8588103eg2423g4c41gaf4agc75e81d9a079"
+// Subtle Swap
+data "DisplayName" "hbcd8cc21gcd24g4f92g843fg9c32bae1b542;4"
 // Swap positions with a target displaced by your thrown projectile.
 data "Description" "he177d447g975fg4ae3gb464ga66aa7b69335"
-data "Icon" "Action_Monk_ShadowStep"
+data "Icon" "GenericIcon_Intent_Utility"
 data "Boosts" "UnlockSpell(Target_SubtleSwap);UnlockSpellVariant(SpellId('Target_SubtleSwap'),ModifyIconGlow())"
 data "OnRemoveFunctors" ""
 data "RemoveConditions" "SpellId('Target_SubtleSwap')"
 data "RemoveEvents" "OnSpellCast"
 data "StackId" "ACTIVE_SUBTLE_SWAP_ENABLED"
-data "StackType" "Overwrite"
+data "StackType" "Ignore"
 data "TickType" "EndTurn"
-// data "Properties" "IsHidden"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
 new entry "ACTIVE_SUBTLE_SWAP_TARGETED"
 type "StatusData"
 data "StatusType" "BOOST"
-// Subtly Displaced
+// Dark Displacement
 data "DisplayName" "hc61f7a00g7093g4492g87a1g8e307d9e4444"
 // Displaced after being hit by a thrown projectile. The thrower may swap positions with this character during their turn.
 data "Description" "ha820eb02g2cc4g4a1eg8ebdg8faac20a4a6f"
-data "Icon" "Spell_Illusion_Blur"
+data "Icon" "GenericIcon_Intent_Control"
 data "StackId" "ACTIVE_SUBTLE_SWAP_TARGETED"
 data "StackType" "Overwrite"
 data "TickType" "EndTurn"
-// data "Properties" "IsHidden"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
