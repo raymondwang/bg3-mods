@@ -1,0 +1,24 @@
+new entry "TotemSpirit_Bear"
+type "PassiveData"
+using "TotemSpirit_Bear"
+data "Boosts" "UnlockSpell(RUI_Shout_Rage_Totem_Container)"
+
+new entry "TotemSpirit_Eagle"
+type "PassiveData"
+using "TotemSpirit_Eagle"
+data "Boosts" "UnlockSpell(RUI_Shout_Rage_Totem_Container)"
+
+new entry "TotemSpirit_Elk"
+type "PassiveData"
+using "TotemSpirit_Elk"
+data "Boosts" "UnlockSpell(RUI_Shout_Rage_Totem_Container)"
+
+new entry "TotemSpirit_Tiger"
+type "PassiveData"
+using "TotemSpirit_Tiger"
+data "Boosts" "UnlockSpell(RUI_Shout_Rage_Totem_Container)"
+
+new entry "TotemSpirit_Wolf"
+type "PassiveData"
+using "TotemSpirit_Wolf"
+data "Boosts" "UnlockSpell(RUI_Shout_Rage_Totem_Container)"
