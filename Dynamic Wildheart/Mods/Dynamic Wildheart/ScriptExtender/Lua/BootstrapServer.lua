@@ -1,0 +1,51 @@
+-- local rageTotemStatusIdToStackPriorityMap = {
+--     ['RAGE_TOTEM_BEAR'] = 2,
+--     ['RAGE_TOTEM_EAGLE'] = 3,
+--     ['RAGE_TOTEM_ELK'] = 4,
+--     ['RAGE_TOTEM_TIGER'] = 5,
+--     ['RAGE_TOTEM_WOLF'] = 6,
+-- }
+
+-- TODO: Maybe make sure this only runs for players
+-- Ext.Osiris.RegisterListener("StatusApplied", 4, "after", function(object, status, _causee, _storyActionID)
+--     if rageTotemStatusIdToStackPriorityMap[status] ~= nil then
+--         print('DROPPING STACK ID FOR STATUS ID ' .. status)
+--         local statusData = Ext.Stats.Get(status)
+--         statusData.StackPriority = 1
+--         statusData:Sync()
+--     end
+-- end)
+
+-- Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", function(object, status, _causee, _applyStoryActionID) 
+--     local stackPriority = rageTotemStatusIdToStackPriorityMap[status];
+--     if stackPriority then
+--         print('RESTORING STACK ID FOR STATUS ID ' .. status)
+--         local statusData = Ext.Stats.Get(status)
+--         statusData.StackPriority = stackPriority
+--         statusData:Sync()
+--     end
+-- end)
+
+-- local rageTotemStatusIdToSpellIdMap = {
+--     ['RAGE_TOTEM_BEAR'] = 'Shout_FerociousAppetite',
+--     ['RAGE_TOTEM_EAGLE'] = 'Projectile_DivingStrike',
+--     ['RAGE_TOTEM_ELK'] = 'Rush_Primal_Stampede',
+--     ['RAGE_TOTEM_TIGER'] = 'Zone_TigersBloodlust',
+--     ['RAGE_TOTEM_WOLF'] = 'Shout_PackHowl_Barbarian',
+-- }
+
+-- Ext.Osiris.RegisterListener("StatusApplied", 4, "after", function(object, status, _causee, _storyActionID)
+--     local totemSpellId = rageTotemStatusIdToSpellIdMap[status];
+--     if totemSpellId then
+--         print('APPLYING SPELL ID ' .. totemSpellId .. 'TO OBJECT GUID ' .. object .. '')
+--         Osi.AddSpell(object, totemSpellId, 1, 1)
+--     end
+-- end)
+
+-- Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", function(object, status, _causee, _applyStoryActionID) 
+--     local totemSpellId = rageTotemStatusIdToSpellIdMap[status];
+--     if totemSpellId then
+--         print('REMOVING SPELL ID ' .. totemSpellId .. 'TO OBJECT GUID ' .. object .. '')
+--         Osi.RemoveSpell(object, totemSpellId, 1, 1)
+--     end
+-- end)

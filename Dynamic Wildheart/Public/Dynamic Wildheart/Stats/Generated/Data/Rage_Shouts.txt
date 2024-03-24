@@ -1,18 +1,17 @@
 new entry "RUI_Shout_Rage_Totem_Container"
 type "SpellData"
-using "Shout_Rage"
 data "SpellType" "Shout"
-data "Icon" "Action_Barbarian_Rage_TigerTotem"
-// Rage
+using "Shout_Rage"
 data "DisplayName" "h649e826cgdffag4a5fgaa39g0299ebd3ed36"
-// choose an animal
 data "Description" "h0a7cb1b4gc021g4a9dg8048ga4415dfe8563"
 data "ExtraDescription" ""
+data "Icon" "Action_Barbarian_Rage_TigerTotem"
 data "TooltipStatusApply" ""
 data "ContainerSpells" "Shout_Rage_Totem_Bear;Shout_Rage_Totem_Eagle;Shout_Rage_Totem_Elk;Shout_Rage_Totem_Tiger;Shout_Rage_Totem_Wolf"
+// TODO: Add AI condition for SG_Rage
 data "RequirementConditions" "not HasStatus('CALM_EMOTIONS')"
 data "SpellFlags" "IsLinkedSpellContainer"
-data "Cooldown" "OncePerTurn"
+// data "Cooldown" "OncePerTurn"
 
 new entry "Shout_Rage_Totem_Bear"
 type "SpellData"
@@ -43,3 +42,10 @@ type "SpellData"
 data "SpellType" "Shout"
 using "Shout_Rage_Totem_Wolf"
 data "SpellContainerID" "RUI_Shout_Rage_Totem_Container"
+
+// DEBUG:
+new entry "Shout_Rage"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage"
+data "UseCosts" ""
