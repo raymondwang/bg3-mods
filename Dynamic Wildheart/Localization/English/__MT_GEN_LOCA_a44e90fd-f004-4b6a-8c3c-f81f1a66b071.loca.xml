@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentList>
-	<content contentuid="h649e826cgdffag4a5fgaa39g0299ebd3ed36" version="1">Rage</content>
+	<content contentuid="h649e826cgdffag4a5fgaa39g0299ebd3ed36" version="1">Bestial Rage</content>
 	<content contentuid="h0a7cb1b4gc021g4a9dg8048ga4415dfe8563" version="1">choose an animal</content>
+	<content contentuid="h11833a79244f40db9ee97c9ae37422420349" version="1">%%% RAGE_ATTACK</content>
+	<content contentuid="hf3f397b54fad44c7a24e841ef15dbafb7890" version="1">%%% RAGE_DAMAGED</content>
+	<content contentuid="h06bc426236654b6fad9f2a209c3f47b77dff" version="1">%%% TOTEM_SPIRIT_RAGE_BOOSTS [1]</content>
+	<content contentuid="h037dd4f29e644c3284c7a385b9b570909ea6" version="1">%%% NO_HEAVY_ARMOUR_VFX [1]</content>
 </contentList>
