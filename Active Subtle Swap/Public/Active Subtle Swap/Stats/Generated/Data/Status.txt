@@ -27,3 +27,4 @@ data "StackId" "RUI_ACTIVE_SUBTLE_SWAP_TARGETED"
 data "StackType" "Overwrite"
 data "TickType" "EndTurn"
 data "OnApplyFunctors" "ApplyStatus(SELF, RUI_ACTIVE_SUBTLE_SWAP_ENABLED, 100, 1)"
+ 

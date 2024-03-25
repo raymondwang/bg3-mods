@@ -1,4 +1,3 @@
-
 new entry "Shout_FerociousAppetite"
 type "SpellData"
 data "SpellType" "Shout"
