@@ -2,5 +2,5 @@
 <contentList>
 	<content contentuid="h649e826cgdffag4a5fgaa39g0299ebd3ed36" version="1">Rage: Bestial Heart</content>
 	<content contentuid="h0a7cb1b4gc021g4a9dg8048ga4415dfe8563" version="1">Enter a &lt;LSTag Type="Status" Tooltip="RAGE"&gt;Rage&lt;/LSTag&gt; that channels the ferocity of the wild.</content>
-	<content contentuid="h4af210ea7a8d4ec1b08cc51580dc5e1e5249" version="1">While raging, you can change Bestial Hearts without expending a &lt;LSTag Type="ActionResource" Tooltip="Rage"&gt;Rage Charge&lt;/LSTag&gt;.</content>
+	<content contentuid="h4af210ea7a8d4ec1b08cc51580dc5e1e5249" version="1">While raging, you can change Bestial Hearts as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt; without expending an additional &lt;LSTag Type="ActionResource" Tooltip="Rage"&gt;Rage Charge&lt;/LSTag&gt;.</content>
 </contentList>

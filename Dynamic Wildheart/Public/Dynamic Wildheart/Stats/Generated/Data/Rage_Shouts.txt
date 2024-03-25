@@ -6,13 +6,12 @@ using "Shout_Rage"
 data "DisplayName" "h649e826cgdffag4a5fgaa39g0299ebd3ed36"
 // Enter a <LSTag Type="Status" Tooltip="RAGE">Rage</LSTag> that channels the ferocity of the wild.
 data "Description" "h0a7cb1b4gc021g4a9dg8048ga4415dfe8563"
-// While raging, you can change Bestial Hearts without expending a <LSTag Type="ActionResource" Tooltip="Rage">Rage Charge</LSTag>.
+// While raging, you can change Bestial Hearts as a <LSTag Type="ActionResource" Tooltip="BonusActionPoint">bonus action</LSTag> without expending an additional <LSTag Type="ActionResource" Tooltip="Rage">Rage Charge</LSTag>.
 data "ExtraDescription" "h4af210ea7a8d4ec1b08cc51580dc5e1e5249"
 data "TooltipStatusApply" ""
 data "ContainerSpells" "Shout_Rage_Totem_Bear; Shout_Rage_Totem_Eagle; Shout_Rage_Totem_Elk; Shout_Rage_Totem_Tiger; Shout_Rage_Totem_Wolf"
 data "RequirementConditions" "not HasStatus('CALM_EMOTIONS')"
 data "SpellFlags" "IsLinkedSpellContainer"
-data "Cooldown" "OncePerTurn"
 
 new entry "Shout_Rage_Totem_Bear"
 type "SpellData"
