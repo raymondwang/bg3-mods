@@ -1,0 +1,19 @@
+{
+    "FileVersion": 1,
+    "Progressions": [
+        {
+            "Comment": "Barbarian Level 7",
+            "UUID": "2ad3b99d-3dae-4c9e-b8b0-8d2e4e0da805",
+            "Strings": [
+                {
+                    "Action": "Insert",
+                    "Type": "PassivesAdded",
+                    "Strings": [
+                        "RUI_InstinctivePounce"
+                    ],
+                    "modGuid": "95bcb61e-0f77-4401-9a78-3952d7f2ff58"
+                }
+            ]
+        }
+    ]
+}

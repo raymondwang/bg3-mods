@@ -1,0 +1,27 @@
+new entry "RUI_INSTINCTIVE_POUNCE_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+// Instinctive Pounce
+data "DisplayName" "h2a97d477f941480a91424871be40937793g7"
+// Your primal instincts are sharpened. Upon entering <LSTag Type="Status" Tooltip="RAGE">Rage</LSTag>, you gain the ability to <LSTag Type="Spell" Tooltip="Projectile_Jump">Jump</LSTag> once without using a bonus action.
+data "Description" "h649cd951e6e4488a9095fcaa94c3d05dcdfd"
+data "Icon" "PassiveFeature_Mobile_DashAcrossDifficultTerrain"
+data "Boosts" "UnlockSpellVariant(RUI_IsInstinctivePounceJump(), ModifyIconGlow(), ModifyUseCosts(Replace, BonusActionPoint, 0, 0, BonusActionPoint), ModifyTooltipDescription())"
+data "RemoveConditions" "RUI_IsInstinctivePounceJump()"
+data "RemoveEvents" "OnSpellCast"
+data "StackId" "RUI_INSTINCTIVE_POUNCE_TECHNICAL"
+data "StackType" "Ignore"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "RUI_InstinctivePounce"
+type "PassiveData"
+// Instinctive Pounce
+data "DisplayName" "h2a97d477f941480a91424871be40937793g7"
+// Your primal instincts are sharpened. Upon entering <LSTag Type="Status" Tooltip="RAGE">Rage</LSTag>, you gain the ability to <LSTag Type="Spell" Tooltip="Projectile_Jump">Jump</LSTag> once without using a bonus action.
+data "Description" "h649cd951e6e4488a9095fcaa94c3d05dcdfd"
+data "Icon" "PassiveFeature_Mobile_DashAcrossDifficultTerrain"
+data "Properties" "Highlighted;ForceShowInCC"
+data "StatsFunctorContext" "OnStatusApply"
+data "Conditions" "StatusHasStatusGroup(context.StatusId, 'SG_Rage')"
+data "StatsFunctors" "ApplyStatus(SELF, RUI_INSTINCTIVE_POUNCE_TECHNICAL, 100, 1)"
