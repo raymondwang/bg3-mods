@@ -1,0 +1,42 @@
+new entry "RUI_PackTactics_Barbarian"
+type "PassiveData"
+using "PackTactics"
+data "Properties" "Temporary"
+
+new entry "RAGE_TOTEM_WOLF"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RAGE_TOTEM_WOLF"
+// Add Pack Tactics:
+data "Passives" "TotemSpirit_Wolf_Rage_Boosts;Rage_Attack;Rage_Damaged;Rage_Wolf_NoHeavyArmour_VFX;RUI_PackTactics_Barbarian"
+
+new entry "PACK_HOWL_WOLF_DIRE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "PACK_HOWL_WOLF_DIRE"
+data "StackId" "PACK_HOWL_WOLF_DIRE"
+
+new entry "Shout_PackHowl_Barbarian"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_PackHowl_Barbarian"
+// Each ally within earshot can move an additional [1] during their next [2] turns.
+data "Description" "hbefb26d8f3ea4d74ac78e33fc4ba550166a1"
+data "DescriptionParams" "Distance(3);2"
+// Extend duration to 2 turns:
+data "SpellProperties" "ApplyStatus(PACK_HOWL_WOLF_DIRE, 100, 2)"
+data "TooltipStatusApply" "ApplyStatus(PACK_HOWL_WOLF_DIRE, 100, 2)"
+// Change to bonus action:
+data "UseCosts" "BonusActionPoint:1"
+
+new entry "Shout_Rage_Totem_Wolf"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage_Totem_Wolf"
+// You automatically use <LSTag Type="Spell" Tooltip="Shout_PackHowl_Barbarian">Inciting Howl</LSTag> and gain <LSTag Type="Passive" Tooltip="PackTactics">Pack Tactics</LSTag>. Your allies have <LSTag Tooltip="Advantage">Advantage</LSTag> on melee <LSTag Tooltip="AttackRoll">Attack Rolls</LSTag> against enemies within [1] of you.
+data "ExtraDescription" "h3ab66db741b34d7f912c65e7b6c5a41249d7"
+// Automatically trigger Inciting Howl on allies:
+data "SpellProperties" "AI_IGNORE:ApplyStatus(SELF,RAGE_TOTEM_WOLF,100,10);AI_ONLY:IF(HasActionResource('ActionPoint', 1, 0, false,,context.Source)):ApplyStatus(SELF,AI_HELPER_RAGE,100,1);ApplyStatus(PACK_HOWL_WOLF_DIRE,100,2)"
+data "AreaRadius" "9"
+data "TargetConditions" "Character() and Ally()"
+

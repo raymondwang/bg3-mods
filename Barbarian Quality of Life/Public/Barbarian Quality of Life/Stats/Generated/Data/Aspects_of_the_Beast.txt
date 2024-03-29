@@ -1,0 +1,35 @@
+new entry "RUI_ASPECT_OF_THE_BEAST_CROCODILE_MOVEMENT_SPEED"
+type "StatusData"
+data "StatusType" "BOOST"
+// %%% EMPTY
+data "DisplayName" "hb049ee5e733947b79f0c425c1207c4f75g4f"
+data "Icon" "PassiveFeature_AspectOfTheBeast_Crocodile"
+data "Boosts" "ActionResource(Movement, 3, 0)"
+data "StackId" "RUI_ASPECT_OF_THE_BEAST_CROCODILE_MOVEMENT_SPEED"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "AspectOfTheBeast_Crocodile"
+type "PassiveData"
+using "AspectOfTheBeast_Crocodile"
+// The Aspect of the Crocodile increases your agility in the water.<br><br>Your <LSTag Tooltip="MovementSpeed">movement speed</LSTag> increases by [1] while standing in water-based surfaces, and you cannot slip on ice.
+data "Description" "h2fc7ef9b14aa4fe6975714bc87e0c50ff9ce"
+// Refactor boosts to give permanent slip immunity:
+data "BoostContext" ""
+data "BoostConditions" ""
+data "Boosts" "StatusImmunity(PRONE_GREASE); StatusImmunity(PRONE_ICE)"
+data "StatsFunctorContext" "OnSurfaceEnter; OnTurn"
+data "Conditions" "RUI_IsInWaterBasedSurface()"
+data "StatsFunctors" "ApplyStatus(RUI_ASPECT_OF_THE_BEAST_CROCODILE_MOVEMENT_SPEED, 100, 1)"
+
+new entry "AspectOfTheBeast_HoneyBadger"
+type "PassiveData"
+using "AspectOfTheBeast_HoneyBadger"
+// Use status groups:
+data "Conditions" "HasAnyStatus({ 'SG_Poisoned', 'SG_Frightened', 'SG_Charmed' }, {}, {}, context.Source) and not HasStatus('SG_Rage', context.Source) and RollDieAgainstDC(DiceType.d20, 10)"
+
+new entry "AspectOfTheBeast_Wolverine"
+type "PassiveData"
+using "AspectOfTheBeast_Wolverine"
+// Add "not Self() and not Ally()":
+data "Conditions" "not Self() and not Ally() and (HasStatus('BLEEDING', context.Target) or HasStatus('SG_Poisoned', context.Target))"

@@ -1,0 +1,7 @@
+// Danger Sense is broken in the base game, but in a way that favors the player.
+// Update its description to more accurately represent its effects.
+new entry "DangerSense"
+type "PassiveData"
+using "DangerSense"
+// You sense when things aren't as they should be.<br><br>You have <LSTag Tooltip="Advantage">Advantage</LSTag> on Dexterity <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>.<br><br>To gain this benefit, you can't be Blinded or Incapacitated.
+data "Description" "hbd1674e540cb4b4cb2677a97f9191beb5fd5"

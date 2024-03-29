@@ -1,0 +1,6 @@
+new entry "Zone_TigersBloodlust"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_TigersBloodlust"
+// Remove Melee weapon requirement:
+data "WeaponTypes" ""

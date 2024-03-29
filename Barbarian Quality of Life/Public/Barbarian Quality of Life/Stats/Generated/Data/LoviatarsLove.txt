@@ -1,0 +1,16 @@
+// Loviatar's Love is fundamentally incompatible with Rage_Damaged, but I don't know why.
+// After spending a few hours investigating with no payoff, I've decided to simply stub Loviatar's Love altogether, and
+// to reimplement it with the Script Extender.
+new entry "GOB_CalmnessInPain"
+type "PassiveData"
+using "GOB_CalmnessInPain"
+data "StatsFunctorContext" ""
+data "Conditions" ""
+data "StatsFunctors" ""
+
+new entry "GOB_CalmnessInPainActive"
+type "PassiveData"
+using "GOB_CalmnessInPainActive"
+data "StatsFunctorContext" ""
+data "Conditions" ""
+data "StatsFunctors" ""

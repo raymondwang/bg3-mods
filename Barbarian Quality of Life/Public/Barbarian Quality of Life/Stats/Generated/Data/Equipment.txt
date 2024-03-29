@@ -1,0 +1,7 @@
+// Enraging Heart Garb: Apply Wrath when entering Rage, and on each subsequent turn:
+new entry "MAG_Barbarian_Armor_RageSupport_Passive"
+type "PassiveData"
+using "MAG_Barbarian_Armor_RageSupport_Passive"
+data "StatsFunctorContext" "OnStatusApplied; OnTurn"
+data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusHasStatusGroup(context.StatusId, 'SG_Rage')) or (context.HasContextFlag(StatsFunctorContext.OnTurn) and HasStatus('SG_Rage', context.Source))"
+data "StatsFunctors" "ApplyStatus(SELF, MAG_VIOLENCE, 100, 2); ApplyStatus(SELF, MAG_VIOLENCE_DURATION_TECHNICAL, 100, 1)"

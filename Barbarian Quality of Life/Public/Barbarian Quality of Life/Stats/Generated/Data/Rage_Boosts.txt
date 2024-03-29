@@ -1,0 +1,39 @@
+// Totem rage boosts are applied inconsistently. Change each one to inherit from this base passive.
+new entry "Rage_Rage_Boosts"
+type "PassiveData"
+using "Rage_Rage_Boosts"
+// Simplify MeleeWeaponAttack or MeleeOffHandWeaponAttack check with the IsMeleeWeaponAttack helper:
+data "Boosts" "Advantage(Ability, Strength); Advantage(SavingThrow, Strength); Resistance(Slashing, Resistant); Resistance(Piercing, Resistant); Resistance(Bludgeoning, Resistant); IF(IsMeleeWeaponAttack()): CharacterWeaponDamage(LevelMapValue(RageDamage)); EntityThrowDamage(LevelMapValue(RageDamage)); CharacterUnarmedDamage(LevelMapValue(RageDamage)); FallDamageMultiplier(0.5)"
+
+new entry "TotemSpirit_Bear_Rage_Boosts"
+type "PassiveData"
+// Technically, this should deviate from the base boosts, as Bear Heart has more resistances, but those resistances are
+// currently configured in the Rage status directly (meaning that they also are not removed with heavy armor), and
+// relocating them from there would conflict with Dynamic Wildheart.
+using "Rage_Rage_Boosts"
+// Bestial Heart: Bear Rage Bonuses
+data "DisplayName" "ha944ea38gf571g4c04ga6a0g6fa68c45daa3;1"
+
+new entry "TotemSpirit_Eagle_Rage_Boosts"
+type "PassiveData"
+using "Rage_Rage_Boosts"
+// Bestial Heart: Eagle Rage Bonuses
+data "DisplayName" "h908aa582ge98eg4d26gb984g0c7e609d3e9d;1"
+
+new entry "TotemSpirit_Elk_Rage_Boosts"
+type "PassiveData"
+using "Rage_Rage_Boosts"
+// Bestial Heart: Elk Rage Bonuses
+data "DisplayName" "h4bd64c8cgdacbg4094g9d0fg780cd0fe3c90;1"
+
+new entry "TotemSpirit_Tiger_Rage_Boosts"
+type "PassiveData"
+using "Rage_Rage_Boosts"
+// Bestial Heart: Tiger Rage Bonuses
+data "DisplayName" "h0e251e0dge87fg4ceag9de5g25b19de77df3;1"
+
+new entry "TotemSpirit_Wolf_Rage_Boosts"
+type "PassiveData"
+using "Rage_Rage_Boosts"
+// Bestial Heart: Wolf Rage Bonuses
+data "DisplayName" "hb4c2c70cg2221g41c0gb063g3edc61d41a40;1"

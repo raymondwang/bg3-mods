@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h017604bbb2b944bfa5464eb2e2306a30ae9g" version="1">Rage Sustained</content>
+	<content contentuid="h6b3623a5f0364412829224032eb5643dg4b7" version="1">Your &lt;LSTag Type="Status" Tooltip="RAGE"&gt;Rage&lt;/LSTag&gt; will not end this turn.</content>
+	<content contentuid="hf0eac9048e1f41e5881d8d7ab3c09a8d1e16" version="1">End your Rage.</content>
+	<content contentuid="hbd1674e540cb4b4cb2677a97f9191beb5fd5" version="1">You sense when things aren't as they should be.&lt;br&gt;&lt;br&gt;You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;To gain this benefit, you can't be Blinded or Incapacitated.</content>
+
+	<content contentuid="h3ab66db741b34d7f912c65e7b6c5a41249d7" version="1">You automatically use &lt;LSTag Type="Spell" Tooltip="Shout_PackHowl_Barbarian"&gt;Inciting Howl&lt;/LSTag&gt; and gain &lt;LSTag Type="Passive" Tooltip="PackTactics"&gt;Pack Tactics&lt;/LSTag&gt;. Your allies have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on melee &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against enemies within [1] of you.</content>
+	<content contentuid="hbefb26d8f3ea4d74ac78e33fc4ba550166a1" version="1">Each ally within earshot can move an additional [1] during their next [2] turns.</content>
+
+	<content contentuid="h2fc7ef9b14aa4fe6975714bc87e0c50ff9ce" version="1">The Aspect of the Crocodile increases your agility in the water.&lt;br&gt;&lt;br&gt;Your &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; increases by [1] while standing in water-based surfaces, and you can't slip on grease or ice.</content>
+	<content contentuid="hb049ee5e733947b79f0c425c1207c4f75g4f" version="1">%%% EMPTY</content>
+</contentList>

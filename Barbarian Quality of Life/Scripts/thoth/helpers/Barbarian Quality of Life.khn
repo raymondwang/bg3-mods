@@ -1,0 +1,4 @@
+function RUI_IsInWaterBasedSurface(entity)
+    local entity = entity or context.Source
+    return InSurface('SurfaceAlcohol', entity) | InSurface('SurfaceBlood', entity) | InSurface('SurfaceDeepWater', entity) | InSurface('SurfaceDeepWaterRunning', entity) | InSurface('SurfaceGrease', entity) | InSurface('SurfaceOil', entity) | InSurface('SurfaceWater', entity) | InSurface('SurfaceWaterFrozen', entity) | InSurface('SurfaceBloodFrozen', entity)
+end

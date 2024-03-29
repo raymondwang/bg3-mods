@@ -1,0 +1,35 @@
+new entry "Shout_Rage"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Rage"
+// Remove Combat requirement:
+data "Requirements" ""
+
+new entry "RAGE_STOP_REMOVE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RAGE_STOP_REMOVE"
+// Rage Sustained
+data "DisplayName" "h017604bbb2b944bfa5464eb2e2306a30ae9g"
+// Your <LSTag Type="Status" Tooltip="RAGE">Rage</LSTag> will not end this turn.
+data "Description" "h6b3623a5f0364412829224032eb5643dg4b7"
+data "Icon" "GenericIcon_Intent_Damage"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog"
+data "RemoveConditions" "not HasStatus('SG_Rage')"
+data "RemoveEvents" "OnStatusRemoved"
+
+new entry "Rage_Attack"
+type "PassiveData"
+using "Rage_Attack"
+// Remove "not Ally()":
+data "Conditions" "Character() or Enemy()"
+
+new entry "Shout_EndRage"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_EndRage"
+// End your Rage.
+data "Description" "hf0eac9048e1f41e5881d8d7ab3c09a8d1e16"
+// Remove BonusActionPoint cost:
+data "UseCosts" ""
