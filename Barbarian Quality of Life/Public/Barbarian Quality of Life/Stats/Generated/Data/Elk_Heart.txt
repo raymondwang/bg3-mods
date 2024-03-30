@@ -2,8 +2,6 @@ new entry "Rush_Primal_Stampede"
 type "SpellData"
 data "SpellType" "Rush"
 using "Rush_Primal_Stampede"
-// Use weapon accuracy instead of unarmed:
-data "SpellRoll" "Attack(AttackType.MeleeWeaponAttack)"
 // Scale damage by Barbarian class level (from 1d4 flat to 1d4 - 1d8):
 data "SpellSuccess" "DealDamage(LevelMapValue(RUI_Rush_Primal_Stampede_Damage) + StrengthModifier, Bludgeoning); TARGET: IF (not SavingThrow(Ability.Strength, ManeuverSaveDC())): ApplyStatus(PRONE, 100, 2)"
 data "TooltipDamageList" "DealDamage(LevelMapValue(RUI_Rush_Primal_Stampede_Damage) + StrengthModifier, Bludgeoning)"

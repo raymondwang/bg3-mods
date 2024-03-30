@@ -8,23 +8,23 @@
         <node id="ModuleInfo">
           <attribute id="Author" type="LSString" value="Armarui" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSString" value="A collection of quality of life improvements and minor bug fixes for Barbarians." />
-          <attribute id="Folder" type="LSString" value="Barbarian Quality of Life" />
+          <attribute id="Description" type="LSString" value="Reworked Loviatar's Love for compatibility with Rage." />
+          <attribute id="Folder" type="LSString" value="Barbarian Quality of Life - Loviatar's Love" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
           <attribute id="MD5" type="LSString" value="" />
           <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
           <attribute id="MenuLevelName" type="FixedString" value="" />
-          <attribute id="Name" type="LSString" value="Barbarian Quality of Life" />
+          <attribute id="Name" type="LSString" value="Barbarian Quality of Life - Loviatar's Love" />
           <attribute id="NumPlayers" type="uint8" value="4" />
           <attribute id="PhotoBooth" type="FixedString" value="" />
           <attribute id="StartupLevelName" type="FixedString" value="" />
           <attribute id="Tags" type="LSString" value="" />
           <attribute id="Type" type="FixedString" value="Add-on" />
-          <attribute id="UUID" type="FixedString" value="2e6ec423-5d59-45ba-9ec0-b0d1e3c363e1" />
-          <attribute id="Version64" type="int64" value="36169534507319296" />
+          <attribute id="UUID" type="FixedString" value="6ebf20d6-c5b7-4fa4-9311-6f61f797bbd9" />
+          <attribute id="Version64" type="int64" value="36028797018963968" />
           <children>
             <node id="PublishVersion">
-              <attribute id="Version64" type="int64" value="36169534507319296" />
+              <attribute id="Version64" type="int64" value="36028797018963968" />
             </node>
             <node id="TargetModes">
               <children>

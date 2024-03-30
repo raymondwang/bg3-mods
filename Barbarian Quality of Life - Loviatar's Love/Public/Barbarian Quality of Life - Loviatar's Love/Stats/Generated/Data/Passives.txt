@@ -1,6 +1,4 @@
-// Loviatar's Love is fundamentally incompatible with Rage_Damaged, but I don't know why.
-// After spending a few hours investigating with no payoff, I've decided to simply stub Loviatar's Love altogether, and
-// to reimplement it with the Script Extender.
+// Stub out Loviatar's Love:
 new entry "GOB_CalmnessInPain"
 type "PassiveData"
 using "GOB_CalmnessInPain"

@@ -1,5 +1,0 @@
-{
-    "RequiredVersion": 14,
-    "ModTable": "Barbarian Quality of Life",
-    "FeatureFlags": ["Lua"]
-}
