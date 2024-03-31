@@ -1,0 +1,5 @@
+new entry "CTY_NecromancyOfThay_ForbiddenKnowledge_Passive"
+type "PassiveData"
+using "CTY_NecromancyOfThay_ForbiddenKnowledge_Passive"
+// Add icon:
+data "Icon" "Item_UNI_FOR_ThayanTome_Socketed"

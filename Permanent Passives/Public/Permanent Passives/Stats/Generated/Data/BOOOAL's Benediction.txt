@@ -1,0 +1,12 @@
+new entry "UND_BOOOALBLESSING"
+type "StatusData"
+data "StatusType" "BOOST"
+using "UND_BOOOALBLESSING"
+// Hide from portrait indicator:
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+new entry "UND_BlessingOfBOOOAL"
+type "PassiveData"
+using "UND_BlessingOfBOOOAL"
+// Add icon:
+data "Icon" "statIcons_BoooalsBenediction"

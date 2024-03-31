@@ -1,0 +1,65 @@
+[size=5][b][color=#ecb454]Background[/color][/b][/size]
+
+The [url=https://bg3.wiki/wiki/Dark_Displacement_Gloves]Dark Displacement Gloves[/url] are among the most interesting pieces of gear in the game, mainly for their unique passive, [url=https://bg3.wiki/wiki/Subtle_Swap]Subtle Swap[/url]. But... Subtle Swap isn't very good, and doesn't have a real niche outside of meme chaos builds. In the vanilla game, its issues include:
+
+[list]
+[*]It has a hardcoded DC of 13, which is far too low to be reliable by the time you get it in Act Three.
+[*]It activates before on-hit effects, which means that if it triggers while throwing [url=https://bg3.wiki/wiki/Nyrulna]Nyrulna[/url], the blast will occur wherever [i]you[/i] were standing. This is an inconvenient, roundabout way to sometimes blow up your whole party.
+[*]It can only trigger when throwing a weapon with the [url=https://bg3.wiki/wiki/Thrown]Thrown [/url]property. It will never activate when you throw other weapons, objects, potions, or explosives.
+[*]Throwing builds are already incredibly strong, and the handwear slot is extremely competitive.
+[*]Worst of all, despite its passive stating that you "may" swap places with the target, you actually have no control over whether you do or not. If the target fails the saving throw, you automatically swap places without any player input.
+[/list]
+As a result, the Dark Displacement Gloves are almost completely unviable today. This mod reworks Subtle Swap from the ground up to fulfill its niche in a more viable way, without being imbalanced.
+
+[size=5][b][color=#ecb454]Overview[/color][/b][/size]
+[center][img]https://i.imgur.com/zxPgylq.png[/img][/center]
+While the Dark Displacement Gloves are equipped, throwing [i]anything[/i] at a target will trigger a Dexterity saving throw against your [url=https://bg3.wiki/wiki/Manoeuvres#Save_DC]Manoeuvre Save DC[/url]. If the saving throw is failed, the target gains Dark Displacement for one turn. The wearer will gain a free action to swap places with any target affected by Dark Displacement.
+
+[list]
+[*]Dark Displacement is removed when the target has its position swapped, but it can be reapplied multiple times in a single turn.
+[*]The wearer can swap places once per application of Dark Displacement, but this effect has no other cooldown. By triggering this effect multiple times in a single turn, your movement will be unmatched.
+[*]Dark Displacement will automatically succeed on allies, so you can reliably reposition your party with this effect as needed.
+[*]If the thrown projectile was another character, Dark Displacement can trigger on that character, in addition to the target.
+[*]Any thrown item can trigger this effect, including bombs and potions. This effect is designed to be extremely versatile — try throwing a Void Bulb into a group of enemies to get your Tiger Barbarian into AOE heaven, or a healing potion at an overextended ally to take their position!
+[*]Grounded units and objects are immune to Dark Displacement.
+[*]Also, the +1 bonus to Attack rolls when throwing was increased to +1d4. Throwing accuracy is already completely unbounded due to Tavern Brawler, so this just makes the gloves a little more viable for builds that haven't specced fully into throwing.
+[/list]
+My goal with this mod was to bring the Subtle Swap's unique effect up to a place of viability against the rest of the gear landscape. Given the overall power level of other gear by the time you get these gloves normally, I don't think any of this makes the gloves overpowered. I hope it makes them more fun and interesting to use.
+
+[size=5][b][color=#ecb454]Installation[/color][/b][/size]
+
+Use the [url=https://github.com/LaughingLeader/BG3ModManager/releases]BG3ModManager[/url]. Add this mod to your load order.
+
+This mod should be safe to install at any time. You should be able to install the mod while already wearing the gloves with no issues.
+
+By default, the Dark Displacement Gloves are acquired in Act Three. If this mechanic sounds fun to you, you can spawn the gloves for yourself using the Script Extender (download the variant with the Console) with the following command:
+
+[code]TemplateAddTo("48c5fe1f-c058-4b47-9a36-024f89a5b0f7", GetHostCharacter(), 1)[/code]
+I haven't tested every interaction with the gloves, so it's possible that you might run into some weird quirks, especially if you have them earlier than you should. Let me know in the comments if you experience anything weird!
+
+[size=5][b][color=#ecb454]Uninstallation[/color][/b][/size]
+
+Should be safe to remove at any time, provided nothing in the game has the Dark Displacement status active. (This status only lasts one turn.)
+
+[size=5][b][color=#ecb454]Compatibility[/color][/b][/size]
+
+This mod only affects the Subtle Swap passive (`MAG_Throw_Swap`). I'm not aware of any mods that also interact with this passive, so this should have no compatibility issues.
+
+[b][color=#ecb454][size=5]My mods[/size][/color][/b]
+
+[b]The Barbarian collection[/b]
+
+[list]
+[*][url=https://www.nexusmods.com/baldursgate3/mods/8350]Barbarian Quality of Life[/url]
+[*][url=https://www.nexusmods.com/baldursgate3/mods/8274]Dynamic Wildheart[/url]
+[*][url=https://www.nexusmods.com/baldursgate3/mods/8359]Instinctive Pounce[/url]
+[/list]
+[b]Other mods[/b]
+
+[list]
+[*]Active Subtle Swap
+[*][url=https://www.nexusmods.com/baldursgate3/mods/8388]Permanent Passives[/url]
+[/list]
+[b][color=#ecb454][size=5]Donations[/size][/color][/b]
+
+100% of the donations that any of my projects receive go to the [url=https://www.wcs.org/support]Wildlife Conservation Society[/url]. If you'd like to show support to me for whatever reason, please consider making a donation directly to them instead.

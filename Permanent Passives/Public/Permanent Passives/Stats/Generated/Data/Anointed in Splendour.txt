@@ -1,0 +1,6 @@
+new entry "LOW_STORMSHORETABERNACLE_GODBLESSED"
+type "StatusData"
+data "StatusType" "BOOST"
+using "LOW_STORMSHORETABERNACLE_GODBLESSED"
+// Use a more appropriate icon:
+data "Icon" "Spell_Evocation_DivineFavor"

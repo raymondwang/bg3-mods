@@ -1,0 +1,16 @@
+new entry "RUI_VOLO_SEE_INVISIBILITY"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MAG_SEE_INVISIBILITY_HIDDEN_IGNORE_RESTING"
+// Hide from portrait indicator:
+data "StatusPropertyFlags" "DisablePortraitIndicator;IgnoreResting"
+
+new entry "CAMP_Volo_ErsatzEye"
+type "PassiveData"
+using "CAMP_Volo_ErsatzEye"
+data "Properties" "IsToggled;ToggledDefaultAddToHotbar;ToggledDefaultOn;Highlighted;ForceShowInCC"
+data "ToggleOnFunctors" "ApplyStatus(RUI_VOLO_SEE_INVISIBILITY, 100, -1)"
+data "ToggleOffFunctors" "RemoveStatus(RUI_VOLO_SEE_INVISIBILITY)"
+// Clear original behavior:
+data "StatsFunctorContext" ""
+data "StatsFunctors" ""

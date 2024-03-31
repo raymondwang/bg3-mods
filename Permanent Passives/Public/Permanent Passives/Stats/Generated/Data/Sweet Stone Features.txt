@@ -1,0 +1,18 @@
+new entry "WYR_CIRCUS_STATUEBLESS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "WYR_CIRCUS_STATUEBLESS"
+data "Passives" "RUI_SweetStoneFeatures"
+// Give it a unique stack ID:
+data "StackId" "WYR_CIRCUS_STATUEBLESS"
+// Hide from portrait indicator:
+data "StatusPropertyFlags" "DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+
+// Show details in a new passive:
+new entry "RUI_SweetStoneFeatures"
+type "PassiveData"
+// Sweet Stone Features
+data "DisplayName" "h9d318df0g739eg4313gbc3cgc77a3afc702e;3"
+// Affected entity is blessed by their own depiction in stone. It gains a +1d4 bonus to <LSTag Tooltip="AttackRoll">Attack Rolls</LSTag> and <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>.
+data "Description" "h0be556d1g0e1bg48ddg9ce4g86d3891c06e2;2"
+data "Icon" "Spell_Enchantment_Bless"

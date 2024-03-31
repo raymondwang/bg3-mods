@@ -1,0 +1,15 @@
+new entry "DEN_SILVANUS_BLESSING"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DEN_SILVANUS_BLESSING"
+data "Passives" "RUI_SilvanusBlessing"
+// Hide from combat log & portrait indicator:
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;IgnoreResting"
+
+new entry "RUI_SilvanusBlessing"
+type "PassiveData"
+// Silvanus' Blessing
+data "DisplayName" "hdc7d0fbcg725eg4534gb980g4950ecf1a02c;2"
+// Has <LSTag Tooltip="Proficiency">Proficiency</LSTag> in <LSTag Tooltip="Nature">Nature</LSTag> and <LSTag Tooltip="AnimalHandling">Animal Handling</LSTag>.
+data "Description" "he7612263g5fc3g4c41gb934gcf3b8eeca3a0;1"
+data "Icon" "statIcons_SilvanusBlessing"

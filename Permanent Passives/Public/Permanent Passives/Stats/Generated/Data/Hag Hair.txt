@@ -1,0 +1,30 @@
+// Add icons:
+new entry "HAG_Hair_CHA_Passive"
+type "PassiveData"
+using "HAG_Hair_CHA_Passive"
+data "Icon" "Item_Quest_HAG_HagHair_Charisma"
+
+new entry "HAG_Hair_CON_Passive"
+type "PassiveData"
+using "HAG_Hair_CON_Passive"
+data "Icon" "Item_Quest_HAG_HagHair_Constitution"
+
+new entry "HAG_Hair_DEX_Passive"
+type "PassiveData"
+using "HAG_Hair_DEX_Passive"
+data "Icon" "Item_Quest_HAG_HagHair_Dexterity"
+
+new entry "HAG_Hair_INT_Passive"
+type "PassiveData"
+using "HAG_Hair_INT_Passive"
+data "Icon" "Item_Quest_HAG_HagHair_Intelligence"
+
+new entry "HAG_Hair_STR_Passive"
+type "PassiveData"
+using "HAG_Hair_STR_Passive"
+data "Icon" "Item_Quest_HAG_HagHair_Strength"
+
+new entry "HAG_Hair_WIS_Passive"
+type "PassiveData"
+using "HAG_Hair_WIS_Passive"
+data "Icon" "Item_Quest_HAG_HagHair_Wisdom"

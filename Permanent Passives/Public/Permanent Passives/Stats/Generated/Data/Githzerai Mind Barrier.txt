@@ -1,0 +1,17 @@
+new entry "COL_GITHZERAI_MIND_TECHNIQUE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "COL_GITHZERAI_MIND_TECHNIQUE"
+data "Icon" "PassiveFeature_ThoughtShield_PsychicResistance"
+data "Passives" "RUI_GithzeraiMindBarrier"
+// Hide from portrait indicator and apply to dead to make the passive permanent:
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// Show details in a new passive:
+new entry "RUI_GithzeraiMindBarrier"
+type "PassiveData"
+// Githzerai Mind Barrier
+data "DisplayName" "hbf05d8a1g044ag4d4aga9ddga01f490d2ed2;2"
+// Having assimilated a splinter of githzerai knowledge, mental barriers have been erected in the affected entity's mind. It has <LSTag Tooltip="Advantage">Advantage</LSTag> on Intelligence <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>.
+data "Description" "haed9b6c2g4574g484bg9e1fgd26cf610c63a;3"
+data "Icon" "PassiveFeature_ThoughtShield_PsychicResistance"
