@@ -1,0 +1,4 @@
+function RUI_StatusDoesNotInvokeOnStatusApply()
+    return StatusId('RUI_REVERBERATION_TECHNICAL_FOR_GLOVES')
+    | StatusId('RUI_REVERBERATION_TECHNICAL_FOR_BOOTS')
+end

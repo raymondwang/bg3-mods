@@ -1,0 +1,52 @@
+new entry "RUI_REVERBERATION_TECHNICAL_FOR_GLOVES"
+type "StatusData"
+data "StatusType" "BOOST"
+// %%% EMPTY
+data "DisplayName" "h77bd43cf55904cb988b3190b2641eab4bed7"
+data "StackId" "RUI_REVERBERATION_TECHNICAL_FOR_GLOVES"
+data "StackType" "Ignore"
+// Hide from portrait indicator:
+// data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Thunder_Reverberation_Gloves_Passive"
+type "PassiveData"
+using "MAG_Thunder_Reverberation_Gloves_Passive"
+// Remove OncePerAttack requirement:
+data "Properties" ""
+// Unchanged, but needed to overwrite Unofficial Bug Fixer:
+data "Conditions" "IsDamageTypeLightning() or IsDamageTypeThunder() or IsDamageTypeRadiant()"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_FOR_GLOVES, 100, 1)"
+// data "StatsFunctors" "ApplyStatus(MAG_THUNDER_REVERBERATION, 100, 2);ApplyStatus(MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL, 100, 1)"
+
+new entry "RUI_REVERBERATION_TECHNICAL_FOR_BOOTS"
+type "StatusData"
+data "StatusType" "BOOST"
+// %%% EMPTY
+data "DisplayName" "h77bd43cf55904cb988b3190b2641eab4bed7"
+data "StackId" "RUI_REVERBERATION_TECHNICAL_FOR_BOOTS"
+data "StackType" "Ignore"
+// Hide from portrait indicator:
+// data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
+type "PassiveData"
+using "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
+// Remove OncePerAttack requirement:
+data "Properties" ""
+data "StatsFunctorContext" "OnStatusApply"
+data "Conditions" "not Self() and not StatusId('MAG_THUNDER_REVERBERATION') and not StatusDoesNotInvokeOnStatusApply() and not RUI_StatusDoesNotInvokeOnStatusApply()"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_FOR_BOOTS, 100, 1)"
+
+// DEBUG:
+new entry "Zone_TigersBloodlust"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_TigersBloodlust"
+data "TargetConditions" "(Character() or Item()) and not Self()"
+data "CycleConditions" "not Dead()"
+
+new entry "AspectOfTheBeast_Wolverine"
+type "PassiveData"
+using "AspectOfTheBeast_Wolverine"
+// Add "not Self() and not Ally()":
+data "Conditions" "not Self() and (HasStatus('BLEEDING', context.Target) or HasStatus('SG_Poisoned', context.Target))"
