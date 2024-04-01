@@ -1,52 +1,54 @@
-new entry "RUI_REVERBERATION_TECHNICAL_FOR_GLOVES"
+new entry "RUI_REVERBERATION_TECHNICAL_AMULET"
 type "StatusData"
 data "StatusType" "BOOST"
-// %%% EMPTY
-data "DisplayName" "h77bd43cf55904cb988b3190b2641eab4bed7"
-data "StackId" "RUI_REVERBERATION_TECHNICAL_FOR_GLOVES"
-data "StackType" "Ignore"
-// Hide from portrait indicator:
-// data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+using "RUI_BASE_TECHNICAL"
+data "StackId" "RUI_REVERBERATION_TECHNICAL_AMULET"
 
-new entry "MAG_Thunder_Reverberation_Gloves_Passive"
+new entry "MAG_Thunder_ReverberationOnRangeSpellDamage_Amulet_Passive"
 type "PassiveData"
-using "MAG_Thunder_Reverberation_Gloves_Passive"
-// Remove OncePerAttack requirement:
+// Remove OncePerAttack cooldown:
 data "Properties" ""
-// Unchanged, but needed to overwrite Unofficial Bug Fixer:
-data "Conditions" "IsDamageTypeLightning() or IsDamageTypeThunder() or IsDamageTypeRadiant()"
-data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_FOR_GLOVES, 100, 1)"
-// data "StatsFunctors" "ApplyStatus(MAG_THUNDER_REVERBERATION, 100, 2);ApplyStatus(MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL, 100, 1)"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_AMULET, 100, 1)"
 
-new entry "RUI_REVERBERATION_TECHNICAL_FOR_BOOTS"
+new entry "RUI_REVERBERATION_TECHNICAL_BOOTS"
 type "StatusData"
 data "StatusType" "BOOST"
-// %%% EMPTY
-data "DisplayName" "h77bd43cf55904cb988b3190b2641eab4bed7"
-data "StackId" "RUI_REVERBERATION_TECHNICAL_FOR_BOOTS"
-data "StackType" "Ignore"
-// Hide from portrait indicator:
-// data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+using "RUI_BASE_TECHNICAL"
+data "StackId" "RUI_REVERBERATION_TECHNICAL_BOOTS"
 
 new entry "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
 type "PassiveData"
 using "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
-// Remove OncePerAttack requirement:
+// Remove OncePerAttack cooldown:
 data "Properties" ""
 data "StatsFunctorContext" "OnStatusApply"
-data "Conditions" "not Self() and not StatusId('MAG_THUNDER_REVERBERATION') and not StatusDoesNotInvokeOnStatusApply() and not RUI_StatusDoesNotInvokeOnStatusApply()"
-data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_FOR_BOOTS, 100, 1)"
+data "Conditions" "not Self() and not StatusId('MAG_THUNDER_REVERBERATION') and not RUI_StatusDoesNotInvokeOnStatusApply()"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_BOOTS, 100, 1)"
 
-// DEBUG:
-new entry "Zone_TigersBloodlust"
-type "SpellData"
-data "SpellType" "Zone"
-using "Zone_TigersBloodlust"
-data "TargetConditions" "(Character() or Item()) and not Self()"
-data "CycleConditions" "not Dead()"
+new entry "RUI_REVERBERATION_TECHNICAL_GLOVES"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_BASE_TECHNICAL"
+data "StackId" "RUI_REVERBERATION_TECHNICAL_GLOVES"
 
-new entry "AspectOfTheBeast_Wolverine"
+new entry "MAG_Thunder_Reverberation_Gloves_Passive"
 type "PassiveData"
-using "AspectOfTheBeast_Wolverine"
-// Add "not Self() and not Ally()":
-data "Conditions" "not Self() and (HasStatus('BLEEDING', context.Target) or HasStatus('SG_Poisoned', context.Target))"
+using "MAG_Thunder_Reverberation_Gloves_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" ""
+// Unchanged, but needed to overwrite Unofficial Bug Fixer:
+data "Conditions" "IsDamageTypeLightning() or IsDamageTypeThunder() or IsDamageTypeRadiant()"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_GLOVES, 100, 1)"
+
+new entry "RUI_REVERBERATION_TECHNICAL_MARKOHESHKIR"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_BASE_TECHNICAL"
+data "StackId" "RUI_REVERBERATION_TECHNICAL_MARKOHESHKIR"
+
+new entry "MAG_Legendary_Chromatic_Reverberation_Passive"
+type "PassiveData"
+using "MAG_Legendary_Chromatic_Reverberation_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" "IsHidden"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_TECHNICAL_AMULET, 100, 1)"

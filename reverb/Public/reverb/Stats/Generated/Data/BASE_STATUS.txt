@@ -1,0 +1,8 @@
+new entry "RUI_BASE_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+// %%% EMPTY
+data "DisplayName" "h77bd43cf55904cb988b3190b2641eab4bed7"
+data "StackId" "RUI_BASE_TECHNICAL"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"

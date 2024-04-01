@@ -1,0 +1,26 @@
+new entry "RUI_FROST_TECHNICAL_ONCE_PER_TURN_HAT"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_BASE_TECHNICAL"
+data "StackId" "RUI_FROST_TECHNICAL_ONCE_PER_TURN_HAT"
+
+new entry "MAG_Frost_GenerateFrostOnStatusApply_Hat_Passive"
+type "PassiveData"
+using "MAG_Frost_GenerateFrostOnStatusApply_Hat_Passive"
+// Remove OncePerTurn cooldown:
+data "Properties" ""
+data "Conditions" "not StatusId('MAG_FROST') and not Item() and not Self() and Enemy() and not RUI_StatusDoesNotInvokeOnStatusApply()"
+data "StatsFunctors" "ApplyStatus(RUI_FROST_TECHNICAL_ONCE_PER_TURN_HAT, 100, 1)"
+
+new entry "RUI_FROST_TECHNICAL_MARKOHESHKIR"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_BASE_TECHNICAL"
+data "StackId" "RUI_FROST_TECHNICAL_MARKOHESHKIR"
+
+new entry "MAG_Legendary_Chromatic_Frost_Passive"
+type "PassiveData"
+using "MAG_Legendary_Chromatic_Frost_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" "IsHidden"
+data "StatsFunctors" "ApplyStatus(RUI_FROST_TECHNICAL_MARKOHESHKIR, 100, 1)"

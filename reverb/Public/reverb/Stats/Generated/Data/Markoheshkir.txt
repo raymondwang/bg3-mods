@@ -1,0 +1,8 @@
+new entry "MAG_Legendary_Chromatic_Poisoned_Passive"
+type "PassiveData"
+using "MAG_Legendary_Chromatic_Frost_Passive"
+// Deadlier than Arsenic
+data "DisplayName" "had2ec1e3g07c5g4816g9e49ge8947fa59468;2"
+// Whenever you deal damage with a spell, inflict [1] <LSTag Type="Status" Tooltip="POISONED">Poison</LSTag> upon the target(s).
+data "Description" "hd37f7018g8837g4da9g973ega0f76c75a973;2"
+data "StatsFunctors" "ApplyStatus(POISONED,100,2)"
