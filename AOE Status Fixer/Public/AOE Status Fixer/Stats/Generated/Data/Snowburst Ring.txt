@@ -1,0 +1,18 @@
+new entry "RUI_SNOWBURST_RING_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+// Snowburst 
+data "DisplayName" "h371d5793g323cg4360g8187g340c41579d65;2"
+data "StackId" "RUI_SNOWBURST_RING_PLACEHOLDER"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Frost_GenerateSurfaceOnColdDamage_Ring_Passive"
+type "PassiveData"
+using "MAG_Frost_GenerateSurfaceOnColdDamage_Ring_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" ""
+// Use placeholder status as a source of truth for preventing the effect from triggering multiple times:
+data "Conditions" "IsDamageTypeCold() and not HasStatus('RUI_SNOWBURST_RING_PLACEHOLDER', context.Target)"
+// GROUND: Application is a little tedious to reimplement with scripts, so apply surface changes normally:
+data "StatsFunctors" "GROUND:SurfaceChange(Freeze); GROUND:CreateSurface(2, 2, WaterFrozen); ApplyStatus(RUI_SNOWBURST_RING_PLACEHOLDER, 100, 1)"

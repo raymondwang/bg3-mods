@@ -1,0 +1,33 @@
+new entry "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
+type "StatusData"
+data "StatusType" "BOOST"
+// Encrusted with Frost
+data "DisplayName" "h473dd343g566cg470cg9307g326ae34d7551;2"
+// Affected entity has <LSTag Tooltip="Disadvantage">Disadvantage</LSTag> on Dexterity <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>.<br><br>When there are [1] or more turns remaining, the entity must succeed a Constitution Saving Throw or take [2] and become <LSTag Type="Status" Tooltip="FROZEN">Frozen</LSTag>. On a successful save, it only takes half damage. Afterward, the frost sloughs away.<br><br>Removed by <LSTag Type="Status" Tooltip="BURNING">Burning</LSTag>.
+data "Description" "h7c465498g8068g4ebdga890gdd76e22fa263;14"
+data "DescriptionParams" "7;DealDamage(1d4, Cold)"
+data "Icon" "statIcons_Frost"
+data "StackId" "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Frost_GenerateFrostOnStatusApply_Hat_Passive"
+type "PassiveData"
+using "MAG_Frost_GenerateFrostOnStatusApply_Hat_Passive"
+// Remove OncePerTurn cooldown:
+data "Properties" ""
+data "Conditions" "Enemy() and not Item() and not Self() and not StatusId('MAG_FROST') and not RUI_StatusDoesNotInvokeOnStatusApply()"
+data "StatsFunctors" "ApplyStatus(RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE, 100, 1)"
+
+new entry "RUI_FROST_MARKOHESHKIR_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
+data "StackId" "RUI_FROST_MARKOHESHKIR_PLACEHOLDER"
+
+new entry "MAG_Legendary_Chromatic_Frost_Passive"
+type "PassiveData"
+using "MAG_Legendary_Chromatic_Frost_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" "IsHidden"
+data "StatsFunctors" "ApplyStatus(RUI_FROST_MARKOHESHKIR_PLACEHOLDER, 100, 1)"

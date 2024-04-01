@@ -1,0 +1,18 @@
+new entry "RUI_POISON_MARKOHESHKIR_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+// Poisoned
+data "DisplayName" "hd58e3781gc50cg486fga2a5gbeab48c9a4c6;1"
+// Suffers <LSTag Tooltip="Disadvantage">Disadvantage</LSTag> on <LSTag Tooltip="AttackRoll">Attack Rolls</LSTag> and <LSTag Tooltip="AbilityCheck">Ability Checks</LSTag>.
+data "Description" "h0e3666feg49ceg4aebg85feg62e178e4462c;2"
+data "Icon" "Status_Poisoned"
+data "StackId" "RUI_POISON_MARKOHESHKIR_PLACEHOLDER"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Legendary_Chromatic_Poisoned_Passive"
+type "PassiveData"
+using "MAG_Legendary_Chromatic_Poisoned_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" "IsHidden"
+data "StatsFunctors" "ApplyStatus(RUI_POISON_MARKOHESHKIR_PLACEHOLDER, 100, 1)"

@@ -1,0 +1,34 @@
+
+new entry "RUI_NOXIOUS_FUMES_GLOVES_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+// Noxious Fumes
+data "DisplayName" "h977d02dcg8373g4766gb03bg6d1dfcc3499a;2"
+// Hostile creatures in a radius of [1] take [2].
+data "Description" "h294980f7gc2f6g416dg8849gc3b99790abf0;3"
+data "DescriptionParams" "Distance(3);DealDamage(1d4, Acid)"
+data "Icon" "GenericIcon_DamageType_Acid"
+data "StackId" "RUI_NOXIOUS_FUMES_GLOVES_PLACEHOLDER"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Acid_NoxiousFumes_Gloves_Passive"
+type "PassiveData"
+using "MAG_Acid_NoxiousFumes_Gloves_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" ""
+data "TooltipSave" "Dexterity"
+data "StatsFunctors" "IF (not SavingThrow(Ability.Dexterity, ManeuverSaveDC())): ApplyStatus(RUI_NOXIOUS_FUMES_GLOVES_PLACEHOLDER, 100, 1)"
+
+new entry "RUI_NOXIOUS_FUMES_MARKOHESHKIR_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_NOXIOUS_FUMES_GLOVES_PLACEHOLDER"
+data "StackId" "RUI_NOXIOUS_FUMES_MARKOHESHKIR_PLACEHOLDER"
+
+new entry "MAG_Legendary_Chromatic_NoxiousFumes_Passive"
+type "PassiveData"
+using "MAG_Legendary_Chromatic_NoxiousFumes_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" "IsHidden"
+data "StatsFunctors" "IF (not SavingThrow(Ability.Dexterity, SourceSpellDC())): ApplyStatus(RUI_NOXIOUS_FUMES_MARKOHESHKIR_PLACEHOLDER, 100, 1)"

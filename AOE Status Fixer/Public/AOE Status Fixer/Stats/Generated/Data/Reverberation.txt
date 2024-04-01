@@ -1,0 +1,61 @@
+new entry "RUI_REVERBERATION_AMULET_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+// Reverberation
+data "DisplayName" "h5f13f6bag4a66g499dga57dg5351662d30b5;2"
+// Affected entity has a -1 penalty to Strength, Dexterity, and Constitution <LSTag Tooltip="SavingThrow">Saving Throws</LSTag> per remaining turn.<br><br>When the entity has [1] or more turns of Reverberation, it takes [2] and possibly falls <LSTag Type="Status" Tooltip="PRONE">Prone</LSTag>. The condition is removed afterward.<br><br>Creatures <LSTag Tooltip="Immune">Immune</LSTag> to Thunder damage can't receive Reverberation.
+data "Description" "hc46be560g7bbcg4f89gbfc8g385b958bd8b8;6"
+data "DescriptionParams" "5;DealDamage(1d4, Thunder)"
+data "Icon" "GenericIcon_Intent_Debuff"
+data "StackId" "RUI_REVERBERATION_AMULET_PLACEHOLDER"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Thunder_ReverberationOnRangeSpellDamage_Amulet_Passive"
+type "PassiveData"
+using "MAG_Thunder_ReverberationOnRangeSpellDamage_Amulet_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" ""
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_AMULET_PLACEHOLDER, 100, 1)"
+
+new entry "RUI_REVERBERATION_BOOTS_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_REVERBERATION_AMULET_PLACEHOLDER"
+data "StackId" "RUI_REVERBERATION_BOOTS_PLACEHOLDER"
+
+new entry "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
+type "PassiveData"
+using "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" ""
+data "Conditions" "Enemy() and not Item() and not Self() and not StatusId('MAG_THUNDER_REVERBERATION') and not RUI_StatusDoesNotInvokeOnStatusApply()"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_BOOTS_PLACEHOLDER, 100, 1)"
+
+new entry "RUI_REVERBERATION_GLOVES_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_REVERBERATION_AMULET_PLACEHOLDER"
+data "StackId" "RUI_REVERBERATION_GLOVES_PLACEHOLDER"
+
+new entry "MAG_Thunder_Reverberation_Gloves_Passive"
+type "PassiveData"
+using "MAG_Thunder_Reverberation_Gloves_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" ""
+// Unchanged, but needed to overwrite Unofficial Bug Fixer:
+data "Conditions" "IsDamageTypeLightning() or IsDamageTypeThunder() or IsDamageTypeRadiant()"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_GLOVES_PLACEHOLDER, 100, 1)"
+
+new entry "RUI_REVERBERATION_MARKOHESHKIR_PLACEHOLDER"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_REVERBERATION_AMULET_PLACEHOLDER"
+data "StackId" "RUI_REVERBERATION_MARKOHESHKIR_PLACEHOLDER"
+
+new entry "MAG_Legendary_Chromatic_Reverberation_Passive"
+type "PassiveData"
+using "MAG_Legendary_Chromatic_Reverberation_Passive"
+// Remove OncePerAttack cooldown:
+data "Properties" "IsHidden"
+data "StatsFunctors" "ApplyStatus(RUI_REVERBERATION_MARKOHESHKIR_PLACEHOLDER, 100, 1)"
