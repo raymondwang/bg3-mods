@@ -6,7 +6,7 @@ data "DisplayName" "h5f13f6bag4a66g499dga57dg5351662d30b5;2"
 // Affected entity has a -1 penalty to Strength, Dexterity, and Constitution <LSTag Tooltip="SavingThrow">Saving Throws</LSTag> per remaining turn.<br><br>When the entity has [1] or more turns of Reverberation, it takes [2] and possibly falls <LSTag Type="Status" Tooltip="PRONE">Prone</LSTag>. The condition is removed afterward.<br><br>Creatures <LSTag Tooltip="Immune">Immune</LSTag> to Thunder damage can't receive Reverberation.
 data "Description" "hc46be560g7bbcg4f89gbfc8g385b958bd8b8;6"
 data "DescriptionParams" "5;DealDamage(1d4, Thunder)"
-data "Icon" "GenericIcon_Intent_Debuff"
+data "Icon" "GenericIcon_DamageType_Thunder"
 data "StackId" "RUI_REVERBERATION_AMULET_PLACEHOLDER"
 data "StackType" "Ignore"
 data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"

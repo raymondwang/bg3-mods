@@ -1,0 +1,18 @@
+new entry "RUI_FAERIE_FIRE_LONGBOW_PLACEHOLDER_DO_NOT_REMOVE"
+type "StatusData"
+data "StatusType" "BOOST"
+// Fiendish Fire
+data "DisplayName" "ha8b3d7c4g5dc2g45b8g9be8gdaa693401f56;2"
+data "Icon" "statIcons_Frost"
+data "StackId" "RUI_FAERIE_FIRE_LONGBOW_PLACEHOLDER_DO_NOT_REMOVE"
+data "StackType" "Ignore"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_WYR_Hellrider_Longbow_Passive"
+type "PassiveData"
+using "MAG_WYR_Hellrider_Longbow_Passive"
+// Remove OncePerTurn cooldown:
+data "Properties" ""
+data "Conditions" "AttackedWithPassiveSourceWeapon() and not HasStatus('RUI_FAERIE_FIRE_LONGBOW_PLACEHOLDER_DO_NOT_REMOVE', context.Target)"
+// Move DC roll after conditions so it doesn't clog up the combat log:
+data "StatsFunctors" "IF (not SavingThrow(Ability.Dexterity, SourceSpellDC())): ApplyStatus(FAERIE_FIRE, 100, 1); ApplyStatus(RUI_FAERIE_FIRE_LONGBOW_PLACEHOLDER_DO_NOT_REMOVE, 100, 1)"

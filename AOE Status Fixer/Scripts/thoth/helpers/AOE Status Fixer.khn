@@ -1,5 +1,6 @@
 function RUI_StatusDoesNotInvokeOnStatusApply()
   return StatusDoesNotInvokeOnStatusApply()
+      | StatusId('RUI_FAERIE_FIRE_LONGBOW_PLACEHOLDER_DO_NOT_REMOVE')
       | StatusId('RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE')
       | StatusId('RUI_FROST_MARKOHESHKIR_PLACEHOLDER')
       | StatusId('RUI_NOXIOUS_FUMES_GLOVES_PLACEHOLDER')
