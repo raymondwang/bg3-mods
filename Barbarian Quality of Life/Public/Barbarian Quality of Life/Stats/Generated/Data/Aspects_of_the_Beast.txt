@@ -1,3 +1,12 @@
+new entry "AspectOfTheBeast_Bear"
+type "PassiveData"
+using "AspectOfTheBeast_Bear"
+// Gain a +[1] bonus to Strength <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>  and <LSTag Tooltip="AbilityCheck">Checks</LSTag>.
+data "ExtraDescription" "hc1331476g0f14g42f6gac36gc4c265d733ab;2"
+data "ExtraDescriptionParams" "2"
+// Add bonuses:
+data "Boosts" "CarryCapacityMultiplier(2); Advantage(Ability, Strength); RollBonus(SavingThrow, 2, Strength); RollBonus(RawAbility, 2, Strength); RollBonus(SkillCheck, 2, Athletics)"
+
 new entry "RUI_ASPECT_OF_THE_BEAST_CROCODILE_MOVEMENT_SPEED"
 type "StatusData"
 data "StatusType" "BOOST"

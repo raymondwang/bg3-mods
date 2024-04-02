@@ -4,8 +4,17 @@ Many pieces of equipment that apply status effects have an internal cooldown of 
 
 This mod reworks the internal cooldowns for these items to instead be "once per attack per enemy". This significantly improves the viability of this gear for AOE builds, letting your Tiger Heart Barbarian spread Reverberation onto three enemies in a single cleave, and your Wizard disperse Poison onto an entire battlefield with one array of Magic Missiles.
 
+[size=3][b][color=#e6bd72]Methodology[/color][/b][/size]
 [spoiler]
-Methodology
+The way this all works is pretty simple. Basically, this mod removes the `OncePerAttack` property from each equipment passive, but instead of applying the desired status effect on each proc, it applies a custom, invisible [i]placeholder[/i] status. This placeholder status has an `Ignore` stack type, meaning subsequent applications of the same status are ignored instead of stacking or re-applying.
+
+In the Script Extender, we subscribe to all status applications, listening for any of our placeholder statuses. When a placeholder status is applied, we swap it out with the real status. Since the placeholder status cannot stack on top of itself, this means that we've successfully applied our desired statuses onto each enemy.
+
+To emulate the `OncePerAttack` interaction, though, this placeholder needs to be removed so that the status can proc again on future attacks. To achieve this, we want to wait until all of the effects of the attack have resolved. There isn't a super easy way to do this, so I went for a naive approach: we simply wait for a few ticks of the game loop to pass, then remove the status. In my local testing, 10 ticks (~330 ms) was long enough for any damage and statuses to resolve, but not so long that the placeholder would still be blocking the next attack (I used dual-wielded daggers to time this).
+
+Lastly, some attacks, like upcasted Magic Missile, could have a duration between the first and last damage applications considerably longer than 10 ticks. To work around this, I set up an additional, lightweight subscription for all spell casts. If the latest spell cast is one of these long-running spells, the placeholder will not be removed until 30 ticks (a full second) have passed.
+
+While the tick subscription logic is a bit superficial, the risk of getting that timeout wrong is quite low. In the worst case, a max cast Magic Missile could potentially proc the same status twice, or a [i]very fast[/i] clicker might be able to initiate an attack before the placeholders have been removed, causing status applications not to work for that attack. I wasn't able to produce either of these scenarios in my local tests, so I'm not that worried about it. Let me know if you notice any bugs.
 [/spoiler]
 
 [img]https://i.imgur.com/FsZ52KL.png[/img]
@@ -99,9 +108,19 @@ Methodology
 
 [size=5][b][color=#e6bd72]Installation[/color][/b][/size]
 
-[size=5][b][color=#e6bd72]Uninstallation[/color][/b][/size]
+Use the [url=https://github.com/LaughingLeader/BG3ModManager/releases]BG3ModManager[/url]. Add this mod to your load order.
+
+The [url=https://github.com/Norbyte/bg3se/releases]BG3 Script Extender[/url] is required. You can install it with the mod manager through its Tools tab, or by pressing CTRL + Shift + Alt + T while the mod manager is focused. No additional configuration is required.
+
+This mod can be installed or uninstalled at any time.
 
 [size=5][b][color=#e6bd72]Compatibility[/color][/b][/size]
+
+This mod is compatible with, but overwrites, the [url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url] mod. For the best results, this must be loaded [b]after[/b] that mod, like so:
+
+[center][img]https://i.imgur.com/vaRzNJa.png[/img][/center]
+
+This mod is compatible with [url=https://www.nexusmods.com/baldursgate3/mods/5755]Rebalance - Common Effects[/url].
 
 [b][color=#e6bd72][size=5]My mods[/size][/color][/b]
 
@@ -115,9 +134,13 @@ Methodology
 [b]Other mods[/b]
 
 [list]
+[*][url=https://www.nexusmods.com/baldursgate3/mods/8461]AOE Status Fixer[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8198]Active Subtle Swap[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8388]Permanent Passives[/url]
 [/list]
-[b][color=#e6bd72][size=5]Donations[/size][/color][/b]
+
+[b][color=#e6bd72][size=5]Support & acknowledgements[/size][/color][/b]
 
 100% of the donations that any of my projects receive go to the [url=https://www.wcs.org/support]Wildlife Conservation Society[/url]. If you'd like to show support to me for whatever reason, please consider making a donation directly to them instead.
+
+Thanks to pals in the BG3 Modding Community for helping me ramp up as a modder, and for all the rubberducking & brainstorming.

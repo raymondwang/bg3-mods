@@ -10,6 +10,8 @@ local numTicksForDefaultAttackAnimation = 10
 -- longer, e.g. an upcasted Magic Missile. We still don't have any sort of
 -- material way to calculate this duration, but we can just artificially inflate
 -- our timeout if we detect that the current spell cast will take longer.
+-- The risk of getting this wrong is pretty low; in the worst case scenario,
+-- a spell could proc a status one more time than expected.
 local numTicksForLongRunningSpellAnimation = 30
 
 --- Wait until an attack and all of its downstream effects have resolved by

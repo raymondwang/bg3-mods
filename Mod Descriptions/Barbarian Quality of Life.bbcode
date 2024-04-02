@@ -1,9 +1,9 @@
-[size=5][b][color=#ecb454]Overview[/color][/b][/size]
+[size=5][b][color=#e6bd72]Overview[/color][/b][/size]
 
-[size=4][b]Class Changes[/b][/size]
+[size=4][b][color=#e6bd72]Class Changes[/color][/b][/size]
 
 [img]https://i.imgur.com/phZBmDB.png[/img]
-[b][size=3]Rage[/size][/b]
+[size=3][b][color=#b6c38f]Rage[/color][/b][/size]
 
 [list]
 [*]Rage can now be used outside of combat. This is useful if you know that a fight is coming, and want to start the encounter strong, or initiate combat with an enraged attack. Note that Rage still needs to be sustained by dealing damage to a hostile enemy or taking damage within the turn, so I recommend doing this in turn-based mode right before combat starts. Inspired by [url=https://www.nexusmods.com/baldursgate3/mods/7102]Unshackled Rage[/url].
@@ -16,7 +16,7 @@
 [/list]
 
 [img]https://i.imgur.com/ruRLFd4.png[/img]
-[b][size=3]Rage Sustained[/size][/b]
+[size=3][b][color=#b6c38f]Rage Sustained[/color][/b][/size]
 
 [list]
 [*]If you have not attacked or received damage in the last turn, Rage may end when you end your turn. This could be easy to lose track of, so I've given this mechanic a name and made it visible. If you have the Rage Sustained status, your Rage will not end when you end your turn.
@@ -24,7 +24,7 @@
 [*]Note: because it was opaque before, you may not have realized that the conditions for prolonging your Rage when attacking an enemy didn't actually require you to deal any damage. In fact, as long as you attempted an attack on a hostile creature, even on a miss, your Rage will be sustained. This also means that missing an ally will sustain your Rage, too.
 [/list]
 
-[size=3][b]Loviatar's Love[/b][/size]
+[size=3][b][color=#b6c38f]Loviatar's Love[/color][/b][/size]
 
 [list]
 [*][url=https://bg3.wiki/wiki/Loviatar%27s_Love_(Condition)]Loviatar's Love[/url] is completely incompatible with the logic to extend Rage via receiving damage today. I'm not sure that this has been documented anywhere; I discovered it while working on [url=https://www.nexusmods.com/baldursgate3/mods/8274]Dynamic Wildheart Barbarian[/url]. If a Barbarian has the Loviatar's Love passive, receiving damage will [b]never[/b] sustain your Rage, which is a huge hidden downside to the passive for a class that otherwise felt like it had a lot of synergy with it!
@@ -33,37 +33,37 @@
 [/list]
 
 [img]https://i.imgur.com/CtO5TRl.png[/img]
-[size=3][b]Danger Sense[/b][/size]
+[size=3][b][color=#b6c38f]Danger Sense[/color][/b][/size]
 
 [list]
 [*]Danger Sense is actually bugged in the player's favor in the base game. Tooltip has been updated to reflect its actual effect: "You sense when things aren't as they should be. You have Advantage on Dexterity Saving Throws. To gain this benefit, you can't be Blinded or Incapacitated."
 [/list]
 
-[size=4][b]Subclass Changes[/b][/size]
+[size=4][b][color=#e6bd72]Subclass Changes[/color][/b][/size]
 
 I'm biased toward Wildheart, so the changes here are oriented around it. If you have other suggestions or requests for improvements to other subclasses, let me know in the comments.
 
 [img]https://i.imgur.com/Iqi97Dg.png[/img]
-[b][size=3]Elk Heart[/size][/b]
+[size=3][b][color=#b6c38f]Elk Heart[/color][/b][/size]
 
 Elk Heart is the second weakest Bestial Heart today, so I've made some small changes here to make its unique ability, [url=https://bg3.wiki/wiki/Primal_Stampede]Primal Stampede[/url], a bit more competitive.
 
 [list]
-[*][s]Attack roll now uses your weapon accuracy, instead of unarmed accuracy (!).[/s] Removed this change to help keep this as an option for unarmed Barbarian builds. Feel free to send in feedback about how this feels.
+[*]Attack roll now uses your weapon accuracy, instead of unarmed accuracy (!). This allows it to benefit from your weapon's enchantments, including effects that activate on melee weapon attack rolls.
 [*]Prone check now uses [url=https://bg3.wiki/wiki/Manoeuvres#Save_DC]Manoeuvre Save DC[/url], instead of 10 + Strength modifier. This is a small buff at higher levels, and a huge one for Dexterity builds.
 [*]Instead of a flat 1d4 across all levels, the damage roll (in addition to Strength modifier) is increased at higher Barbarian levels: at level 6 it becomes 1d6, and at level 10 it becomes 1d8.
 [*]Movement range increased by 33%, and animation speed doubled to feel less clunky.
 [/list]
 
 [img]https://i.imgur.com/3LOIup1.png[/img]
-[b][size=3]Tiger Heart[/size][/b]
+[size=3][b][color=#b6c38f]Tiger Heart[/color][/b][/size]
 
 [list]
 [*]For all the Barbamonk enjoyers: Tiger's Bloodlust is now usable while unarmed. Note that the tooltip and damage preview won't work very well, but this behavior is consistent with that of unarmed Diving Strike.
 [/list]
 
 [img]https://i.imgur.com/So4yShb.png[/img]
-[size=3][b]Wolf Heart[/b][/size]
+[size=3][b][color=#b6c38f]Wolf Heart[/color][/b][/size]
 
 Wolf Heart is the weakest Bestial Heart (in my opinion). I wanted to make it feel better without making it stronger than the strongest Bestial Hearts (Bear & Eagle) by focusing on its niche of playing as a pack leader.
 
@@ -75,8 +75,17 @@ Special thanks to Syrchalis for his work to auto-cast Inciting Howl when enterin
 [*]Inciting Howl now only costs a bonus action, and lasts for two turns.
 [/list]
 
+[img]https://i.imgur.com/77o0VP0.png[/img]
+[size=3][b][color=#b6c38f]Aspect of the Beast: Bear[/color][/b][/size]
+
+Since the Bear Heart is arguably the strongest animal totem in the game, it's ironic that the Bear [i]Aspect[/i] is one of the weakest in its category. In the base game, it doubles your carrying capacity and gives you Advantage on Strength checks. On paper, this sounds OK, but in practice, it's worthless for game balance because one of the core features of Rage is that it grants you Advantage on Strength checks already.
+
+[list]
+[*]Now grants a +2 bonus to all Strength checks and saving throws.
+[/list]
+
 [img]https://i.imgur.com/iAkOqbE.png[/img]
-[b][size=3]Aspect of the Beast: Crocodile[/size][/b]
+[size=3][b][color=#b6c38f]Aspect of the Beast: Crocodile[/color][/b][/size]
 
 In the base game, the Crocodile Aspect does two things: make you faster on wet surfaces (including grease and ice), and give you Advantage on saving throws on slippery surfaces. But slipping on slippery surfaces always uses a Dexterity saving throw, and, as mentioned above, Danger Sense is bugged to give Barbarians Advantage on all Dexterity saving throws at level 2 already. As a result, this Aspect is completely useless: you gain a little movement speed, but don't gain any additional resistance to slipping on ice.
 
@@ -86,7 +95,7 @@ In the base game, the Crocodile Aspect does two things: make you faster on wet s
 [/list]
 
 [img]https://i.imgur.com/w3MYKcE.png[/img]
-[b][size=3]Aspect of the Beast: Honey Badger[/size][/b]
+[size=3][b][color=#b6c38f]Aspect of the Beast: Honey Badger[/color][/b][/size]
 
 [list]
 [*]Can now trigger in response to any status in the poisoned, frightened, or charmed [url=https://bg3.wiki/wiki/Status_groups]status groups[/url], instead of only in response to the specifically named statuses.
@@ -94,15 +103,15 @@ In the base game, the Crocodile Aspect does two things: make you faster on wet s
 [/list]
 
 [img]https://i.imgur.com/KDphYyR.png[/img]
-[size=3][b]Aspect of the Beast: Wolverine[/b][/size]
+[size=3][b][color=#b6c38f]Aspect of the Beast: Wolverine[/color][/b][/size]
 
 [list]
 [*]Can no longer trigger on yourself or your allies.
 [/list]
 
-[size=4][b]Equipment[/b][/size]
+[size=4][b][color=#e6bd72]Equipment[/color][/b][/size]
 
-[size=3][b]Enraging Heart Garb[/b][/size]
+[size=3][b][color=#b6c38f]Enraging Heart Garb[/color][/b][/size]
 
 Sort of unbelievably, this armor does literally nothing today. It has no passive or active effects whatsoever in the game's code.
 
@@ -111,7 +120,7 @@ Sort of unbelievably, this armor does literally nothing today. It has no passive
 [*]Note that this deviates from the implementation in the [url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url] mod, which only grants you Wrath when your turn starts. That fix is totally valid, but it means that this armor is completely useless on the first turn of any battle (unless you pre-casted Rage). Considering the importance of that first turn for encounters in this game, this feels like a significant gap.
 [/list]
 
-[size=5][b][color=#ecb454]Installation[/color][/b][/size]
+[size=5][b][color=#e6bd72]Installation[/color][/b][/size]
 
 Use the [url=https://github.com/LaughingLeader/BG3ModManager/releases]BG3ModManager[/url]. Add this mod to your load order.
 
@@ -119,11 +128,11 @@ The [url=https://github.com/Norbyte/bg3se/releases]BG3 Script Extender[/url] is 
 
 This mod should be safe to install at any time.
 
-[size=5][b][color=#ecb454]Uninstallation[/color][/b][/size]
+[size=5][b][color=#e6bd72]Uninstallation[/color][/b][/size]
 
 This mod should be safe to uninstall at any time.
 
-[size=5][b][color=#ecb454]Compatibility[/color][/b][/size]
+[size=5][b][color=#e6bd72]Compatibility[/color][/b][/size]
 
 This mod is a collection of disparate fixes, so its scope is somewhat broad. While it should be compatible with most other mods, it may have to be loaded later in the load order than some other mods. It should be specifically ordered [b]after[/b] the following (highly recommended) mods:
 
@@ -131,26 +140,25 @@ This mod is a collection of disparate fixes, so its scope is somewhat broad. Whi
 [*][url=https://www.nexusmods.com/baldursgate3/mods/5846]Rebalance: Class Spells[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url]
 [/list]
-
 If you find any mod incompatibilities, please let me know in the comments.
 
-[b][color=#ecb454][size=5]My mods[/size][/color][/b]
+[b][color=#e6bd72][size=5]My mods[/size][/color][/b]
 
 [b]The Barbarian collection[/b]
 
 [list]
-[*]Barbarian Quality of Life
+[*][url=https://www.nexusmods.com/baldursgate3/mods/8350]Barbarian Quality of Life[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8274]Dynamic Wildheart[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8359]Instinctive Pounce[/url]
 [/list]
-
 [b]Other mods[/b]
 
 [list]
+[*][url=https://www.nexusmods.com/baldursgate3/mods/8461]AOE Status Fixer[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8198]Active Subtle Swap[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8388]Permanent Passives[/url]
 [/list]
 
-[b][color=#ecb454][size=5]Donations[/size][/color][/b]
+[b][color=#e6bd72][size=5]Support[/size][/color][/b]
 
 100% of the donations that any of my projects receive go to the [url=https://www.wcs.org/support]Wildlife Conservation Society[/url]. If you'd like to show support to me for whatever reason, please consider making a donation directly to them instead.
