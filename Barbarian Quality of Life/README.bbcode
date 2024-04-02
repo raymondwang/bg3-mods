@@ -14,6 +14,7 @@
 [*]Deals an additional 2 (increased to 3 at level 9) damage with melee and improvised weapons, unarmed strikes, and while throwing objects. This was previously bugged for Wildheart Totems; half of them did not scale at level 9, and some of them didn't apply to Finesse weapons. This applies regardless of whether you are using Strength or Dexterity (deviating from the fix in the [url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url] mod).
 [/list][*]End Rage is now a free action. This isn't huge, but maybe it'll help out Barbarian / caster multiclasses a bit.
 [/list]
+
 [img]https://i.imgur.com/ruRLFd4.png[/img]
 [b][size=3]Rage Sustained[/size][/b]
 
@@ -22,6 +23,7 @@
 [*]Sustaining your Rage now no longer requires you to attack an enemy; attacking any character will now extend your Rage, even an ally. For better or worse, your Rage has a better chance of surviving a round of confusion.
 [*]Note: because it was opaque before, you may not have realized that the conditions for prolonging your Rage when attacking an enemy didn't actually require you to deal any damage. In fact, as long as you attempted an attack on a hostile creature, even on a miss, your Rage will be sustained. This also means that missing an ally will sustain your Rage, too.
 [/list]
+
 [size=3][b]Loviatar's Love[/b][/size]
 
 [list]
@@ -29,12 +31,14 @@
 [*]To fix this interaction, I've completely stubbed out the functionality of Loviatar's Love in the base game files, and reimplemented it from scratch using the Script Extender.
 [*]Note: I've moved this change into an optional file. It can be loaded independently of the main file, but it requires the Script Extender. It's compatible with [url=https://www.nexusmods.com/baldursgate3/mods/8388]Permanent Passives[/url], but not with mods that change the base functionality of Loviatar's Love itself.
 [/list]
+
 [img]https://i.imgur.com/CtO5TRl.png[/img]
-[size=3][b]Danger Sense[/b]
-[/size]
+[size=3][b]Danger Sense[/b][/size]
+
 [list]
 [*]Danger Sense is actually bugged in the player's favor in the base game. Tooltip has been updated to reflect its actual effect: "You sense when things aren't as they should be. You have Advantage on Dexterity Saving Throws. To gain this benefit, you can't be Blinded or Incapacitated."
 [/list]
+
 [size=4][b]Subclass Changes[/b][/size]
 
 I'm biased toward Wildheart, so the changes here are oriented around it. If you have other suggestions or requests for improvements to other subclasses, let me know in the comments.
@@ -50,12 +54,14 @@ Elk Heart is the second weakest Bestial Heart today, so I've made some small cha
 [*]Instead of a flat 1d4 across all levels, the damage roll (in addition to Strength modifier) is increased at higher Barbarian levels: at level 6 it becomes 1d6, and at level 10 it becomes 1d8.
 [*]Movement range increased by 33%, and animation speed doubled to feel less clunky.
 [/list]
+
 [img]https://i.imgur.com/3LOIup1.png[/img]
 [b][size=3]Tiger Heart[/size][/b]
 
 [list]
 [*]For all the Barbamonk enjoyers: Tiger's Bloodlust is now usable while unarmed. Note that the tooltip and damage preview won't work very well, but this behavior is consistent with that of unarmed Diving Strike.
 [/list]
+
 [img]https://i.imgur.com/So4yShb.png[/img]
 [size=3][b]Wolf Heart[/b][/size]
 
@@ -68,22 +74,25 @@ Special thanks to Syrchalis for his work to auto-cast Inciting Howl when enterin
 [*]Entering Rage will now automatically cast Inciting Howl on your allies for two turns.
 [*]Inciting Howl now only costs a bonus action, and lasts for two turns.
 [/list]
+
 [img]https://i.imgur.com/iAkOqbE.png[/img]
-[b][size=3]Aspect of the Beast: Crocodile
-[/size][/b]
+[b][size=3]Aspect of the Beast: Crocodile[/size][/b]
+
 In the base game, the Crocodile Aspect does two things: make you faster on wet surfaces (including grease and ice), and give you Advantage on saving throws on slippery surfaces. But slipping on slippery surfaces always uses a Dexterity saving throw, and, as mentioned above, Danger Sense is bugged to give Barbarians Advantage on all Dexterity saving throws at level 2 already. As a result, this Aspect is completely useless: you gain a little movement speed, but don't gain any additional resistance to slipping on ice.
 
 [list]
 [*]The Crocodile Aspect now grants [b]immunity[/b] to slipping on grease or ice.
 [*]This passive has also been refactored to be more performant and consistent.
 [/list]
+
 [img]https://i.imgur.com/w3MYKcE.png[/img]
-[b][size=3]Aspect of the Beast: Honey Badger
-[/size][/b]
+[b][size=3]Aspect of the Beast: Honey Badger[/size][/b]
+
 [list]
 [*]Can now trigger in response to any status in the poisoned, frightened, or charmed [url=https://bg3.wiki/wiki/Status_groups]status groups[/url], instead of only in response to the specifically named statuses.
 [*]Honestly, this passive could still use a lot of work to be made truly viable outside of meme builds, but any changes may be better saved for a separate mod that's a little less concerned with balance.
 [/list]
+
 [img]https://i.imgur.com/KDphYyR.png[/img]
 [size=3][b]Aspect of the Beast: Wolverine[/b][/size]
 
@@ -101,6 +110,7 @@ Sort of unbelievably, this armor does literally nothing today. It has no passive
 [*]Grants 2 stacks of Wrath when entering Rage, and on each turn that your Rage continues.
 [*]Note that this deviates from the implementation in the [url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url] mod, which only grants you Wrath when your turn starts. That fix is totally valid, but it means that this armor is completely useless on the first turn of any battle (unless you pre-casted Rage). Considering the importance of that first turn for encounters in this game, this feels like a significant gap.
 [/list]
+
 [size=5][b][color=#ecb454]Installation[/color][/b][/size]
 
 Use the [url=https://github.com/LaughingLeader/BG3ModManager/releases]BG3ModManager[/url]. Add this mod to your load order.
@@ -121,6 +131,7 @@ This mod is a collection of disparate fixes, so its scope is somewhat broad. Whi
 [*][url=https://www.nexusmods.com/baldursgate3/mods/5846]Rebalance: Class Spells[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url]
 [/list]
+
 If you find any mod incompatibilities, please let me know in the comments.
 
 [b][color=#ecb454][size=5]My mods[/size][/color][/b]
@@ -132,12 +143,14 @@ If you find any mod incompatibilities, please let me know in the comments.
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8274]Dynamic Wildheart[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8359]Instinctive Pounce[/url]
 [/list]
+
 [b]Other mods[/b]
 
 [list]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8198]Active Subtle Swap[/url]
 [*][url=https://www.nexusmods.com/baldursgate3/mods/8388]Permanent Passives[/url]
 [/list]
+
 [b][color=#ecb454][size=5]Donations[/size][/color][/b]
 
 100% of the donations that any of my projects receive go to the [url=https://www.wcs.org/support]Wildlife Conservation Society[/url]. If you'd like to show support to me for whatever reason, please consider making a donation directly to them instead.
