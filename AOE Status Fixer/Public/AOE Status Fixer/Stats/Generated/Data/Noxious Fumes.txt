@@ -1,4 +1,3 @@
-
 new entry "RUI_NOXIOUS_FUMES_GLOVES_PLACEHOLDER"
 type "StatusData"
 data "StatusType" "BOOST"

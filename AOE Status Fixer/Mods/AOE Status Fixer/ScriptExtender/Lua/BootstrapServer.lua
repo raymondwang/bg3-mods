@@ -53,8 +53,6 @@ local function HandlePlaceholderStatusApplied(target, status, source)
   local statusToApply = PLACEHOLDER_STATUS_TO_APPLIED_STATUS[status]
   if not statusToApply then return end
 
-  print(string.format("PLACEHOLDER STATUS APPLIED: %s", status))
-
   if statusToApply == 'MAG_FROST' then
     Osi.ApplyStatus(target, 'MAG_FROST', 12, 0, source)
     Osi.ApplyStatus(target, 'MAG_FROST_DURATION_TECHNICAL', 6, 0, source)
@@ -70,12 +68,7 @@ local function HandlePlaceholderStatusApplied(target, status, source)
   -- Statuses suffixed with DO_NOT_REMOVE should function as OncePerTurn:
   if string.find(status, 'DO_NOT_REMOVE') then return end
 
-  print(string.format("DEFERRING REMOVAL OF TECHNICAL STATUS: %s", status))
-
-  DeferTaskUntilAfterAttackResolves(function()
-    print("REMOVING STATUS: " .. status)
-    Osi.RemoveStatus(target, status)
-  end)
+  DeferTaskUntilAfterAttackResolves(function() Osi.RemoveStatus(target, status) end)
 end
 
 Ext.Osiris.RegisterListener("StatusApplied", 4, "after", HandlePlaceholderStatusApplied)
