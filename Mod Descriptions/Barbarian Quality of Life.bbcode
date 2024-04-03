@@ -6,21 +6,21 @@
 [size=3][b][color=#b6c38f]Rage[/color][/b][/size]
 
 [list]
-[*]Rage can now be used outside of combat. This is useful if you know that a fight is coming, and want to start the encounter strong, or initiate combat with an enraged attack. Note that Rage still needs to be sustained by dealing damage to a hostile enemy or taking damage within the turn, so I recommend doing this in turn-based mode right before combat starts. Inspired by [url=https://www.nexusmods.com/baldursgate3/mods/7102]Unshackled Rage[/url].
-[*]All Rage boosts (including Rage, Frenzy, Rage: Wild Magic, and all Wildheart Totems) are now applied consistently, for all variants. These boosts include:
+[*][color=#4db695]Rage can now be used outside of combat.[/color] This is useful if you know that a fight is coming, and want to start the encounter strong, or initiate combat with an enraged attack. Note that Rage still needs to be sustained by dealing damage to a hostile enemy or taking damage within the turn, so I recommend doing this in turn-based mode right before combat starts. Inspired by [url=https://www.nexusmods.com/baldursgate3/mods/7102]Unshackled Rage[/url].
+[*][color=#4db695]All Rage boosts (including Rage, Frenzy, Rage: Wild Magic, and all Wildheart Totems) are now applied consistently, for all variants.[/color] These boosts include:
 [list]
 [*]Advantage on Strength checks & saving throws
 [*]Resistance to physical damage, including Slashing, Piercing, Bludgeoning, & Fall damage
 [*]Deals an additional 2 (increased to 3 at level 9) damage with melee and improvised weapons, unarmed strikes, and while throwing objects. This was previously bugged for Wildheart Totems; half of them did not scale at level 9, and some of them didn't apply to Finesse weapons. This applies regardless of whether you are using Strength or Dexterity (deviating from the fix in the [url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url] mod).
-[/list][*]End Rage is now a free action. This isn't huge, but maybe it'll help out Barbarian / caster multiclasses a bit.
+[/list][*][color=#4db695]End Rage is now a free action.[/color] This isn't huge, but maybe it'll help out Barbarian / caster multiclasses a bit.
 [/list]
 
 [img]https://i.imgur.com/ruRLFd4.png[/img]
 [size=3][b][color=#b6c38f]Rage Sustained[/color][/b][/size]
 
 [list]
-[*]If you have not attacked or received damage in the last turn, Rage may end when you end your turn. This could be easy to lose track of, so I've given this mechanic a name and made it visible. If you have the Rage Sustained status, your Rage will not end when you end your turn.
-[*]Sustaining your Rage now no longer requires you to attack an enemy; attacking any character will now extend your Rage, even an ally. For better or worse, your Rage has a better chance of surviving a round of confusion.
+[*][color=#4db695]Added a visible status indicator for whether your Rage will end early.[/color] If you have not attacked or received damage in the last turn, Rage may end when you end your turn. This could be easy to lose track of, so I've given this mechanic a name and made it visible. If you have the Rage Sustained status, your Rage will not end when you end your turn.
+[*][color=#4db695]Attacking an ally will now sustain your Rage.[/color] For better or worse, your Rage has a better chance of surviving a round of confusion.
 [*]Note: because it was opaque before, you may not have realized that the conditions for prolonging your Rage when attacking an enemy didn't actually require you to deal any damage. In fact, as long as you attempted an attack on a hostile creature, even on a miss, your Rage will be sustained. This also means that missing an ally will sustain your Rage, too.
 [/list]
 
@@ -28,7 +28,7 @@
 
 [list]
 [*][url=https://bg3.wiki/wiki/Loviatar%27s_Love_(Condition)]Loviatar's Love[/url] is completely incompatible with the logic to extend Rage via receiving damage today. I'm not sure that this has been documented anywhere; I discovered it while working on [url=https://www.nexusmods.com/baldursgate3/mods/8274]Dynamic Wildheart Barbarian[/url]. If a Barbarian has the Loviatar's Love passive, receiving damage will [b]never[/b] sustain your Rage, which is a huge hidden downside to the passive for a class that otherwise felt like it had a lot of synergy with it!
-[*]To fix this interaction, I've completely stubbed out the functionality of Loviatar's Love in the base game files, and reimplemented it from scratch using the Script Extender.
+[*][color=#4db695]To fix this interaction, I've completely stubbed out the functionality of Loviatar's Love in the base game files, and reimplemented it from scratch using the Script Extender.[/color]
 [*]Note: I've moved this change into an optional file. It can be loaded independently of the main file, but it requires the Script Extender. It's compatible with [url=https://www.nexusmods.com/baldursgate3/mods/8388]Permanent Passives[/url], but not with mods that change the base functionality of Loviatar's Love itself.
 [/list]
 
@@ -49,17 +49,17 @@ I'm biased toward Wildheart, so the changes here are oriented around it. If you 
 Elk Heart is the second weakest Bestial Heart today, so I've made some small changes here to make its unique ability, [url=https://bg3.wiki/wiki/Primal_Stampede]Primal Stampede[/url], a bit more competitive.
 
 [list]
-[*]Attack roll now uses your weapon accuracy, instead of unarmed accuracy (!). This allows it to benefit from your weapon's enchantments, including effects that activate on melee weapon attack rolls.
-[*]Prone check now uses [url=https://bg3.wiki/wiki/Manoeuvres#Save_DC]Manoeuvre Save DC[/url], instead of 10 + Strength modifier. This is a small buff at higher levels, and a huge one for Dexterity builds.
-[*]Instead of a flat 1d4 across all levels, the damage roll (in addition to Strength modifier) is increased at higher Barbarian levels: at level 6 it becomes 1d6, and at level 10 it becomes 1d8.
-[*]Movement range increased by 33%, and animation speed doubled to feel less clunky.
+[*][color=#4db695]Attack roll now uses your weapon accuracy, instead of unarmed accuracy (!).[/color] This allows it to benefit from your weapon's enchantments, including effects that activate on melee weapon attack rolls.
+[*][color=#4db695]Prone check now uses [url=https://bg3.wiki/wiki/Manoeuvres#Save_DC]Manoeuvre Save DC[/url], instead of 10 + Strength modifier.[/color] This is a small buff at higher levels, and a huge one for Dexterity builds.
+[*][color=#4db695]Instead of a flat 1d4 across all levels, the damage roll (in addition to Strength modifier) is increased at higher Barbarian levels: at level 6 it becomes 1d6, and at level 10 it becomes 1d8.[/color]
+[*][color=#4db695]Movement range increased by 33%, and animation speed doubled to feel less clunky.[/color]
 [/list]
 
 [img]https://i.imgur.com/3LOIup1.png[/img]
 [size=3][b][color=#b6c38f]Tiger Heart[/color][/b][/size]
 
 [list]
-[*]For all the Barbamonk enjoyers: Tiger's Bloodlust is now usable while unarmed. Note that the tooltip and damage preview won't work very well, but this behavior is consistent with that of unarmed Diving Strike.
+[*]For all the Barbamonk enjoyers: [color=#4db695]Tiger's Bloodlust is now usable while unarmed.[/color] Note that the tooltip and damage preview won't work very well, but this behavior is consistent with that of unarmed Diving Strike.
 [/list]
 
 [img]https://i.imgur.com/So4yShb.png[/img]
@@ -70,9 +70,9 @@ Wolf Heart is the weakest Bestial Heart (in my opinion). I wanted to make it fee
 Special thanks to Syrchalis for his work to auto-cast Inciting Howl when entering Rage: Wolf Heart in his [url=https://www.nexusmods.com/baldursgate3/mods/5846]Rebalance - Class Spells[/url] mod, and for letting me pull them in here! Make sure to check out his other mods; I used them a lot to learn how to make mods, and they're the gold standard for my impression of balance.
 
 [list]
-[*]Rage: Wolf Heart now grants [url=https://bg3.wiki/wiki/Pack_Tactics]Pack Tactics[/url] to the Barbarian, to give yourself Advantage on targets surrounded by your allies. This isn't a huge buff because Barbarians already have the most reliable way of gaining Advantage on attacks in the game in Reckless Attack, but I love the flavor of further incentivizing Wolf Heart Barbarians to stay close to the pack.
-[*]Entering Rage will now automatically cast Inciting Howl on your allies for two turns.
-[*]Inciting Howl now only costs a bonus action, and lasts for two turns.
+[*][color=#4db695]Rage: Wolf Heart now grants [url=https://bg3.wiki/wiki/Pack_Tactics]Pack Tactics[/url] to the Barbarian, to give yourself Advantage on targets surrounded by your allies.[/color] This isn't a huge buff because Barbarians already have the most reliable way of gaining Advantage on attacks in the game in Reckless Attack, but I love the flavor of further incentivizing Wolf Heart Barbarians to stay close to the pack.
+[*][color=#4db695]Entering Rage will now automatically cast Inciting Howl on your allies for two turns.[/color]
+[*][color=#4db695]Inciting Howl now only costs a bonus action, and lasts for two turns.[/color]
 [/list]
 
 [img]https://i.imgur.com/77o0VP0.png[/img]
@@ -81,7 +81,7 @@ Special thanks to Syrchalis for his work to auto-cast Inciting Howl when enterin
 Since the Bear Heart is arguably the strongest animal totem in the game, it's ironic that the Bear [i]Aspect[/i] is one of the weakest in its category. In the base game, it doubles your carrying capacity and gives you Advantage on Strength checks. On paper, this sounds OK, but in practice, it's worthless for game balance because one of the core features of Rage is that it grants you Advantage on Strength checks already.
 
 [list]
-[*]Now grants a +2 bonus to all Strength checks and saving throws.
+[*][color=#4db695]Now grants a +2 bonus to all Strength checks and saving throws.[/color]
 [/list]
 
 [img]https://i.imgur.com/iAkOqbE.png[/img]
@@ -90,7 +90,7 @@ Since the Bear Heart is arguably the strongest animal totem in the game, it's ir
 In the base game, the Crocodile Aspect does two things: make you faster on wet surfaces (including grease and ice), and give you Advantage on saving throws on slippery surfaces. But slipping on slippery surfaces always uses a Dexterity saving throw, and, as mentioned above, Danger Sense is bugged to give Barbarians Advantage on all Dexterity saving throws at level 2 already. As a result, this Aspect is completely useless: you gain a little movement speed, but don't gain any additional resistance to slipping on ice.
 
 [list]
-[*]The Crocodile Aspect now grants [b]immunity[/b] to slipping on grease or ice.
+[*][color=#4db695]The Crocodile Aspect now grants [b]immunity[/b] to slipping on grease or ice.[/color]
 [*]This passive has also been refactored to be more performant and consistent.
 [/list]
 
@@ -98,7 +98,7 @@ In the base game, the Crocodile Aspect does two things: make you faster on wet s
 [size=3][b][color=#b6c38f]Aspect of the Beast: Honey Badger[/color][/b][/size]
 
 [list]
-[*]Can now trigger in response to any status in the poisoned, frightened, or charmed [url=https://bg3.wiki/wiki/Status_groups]status groups[/url], instead of only in response to the specifically named statuses.
+[*][color=#4db695]Can now trigger in response to any status in the poisoned, frightened, or charmed [url=https://bg3.wiki/wiki/Status_groups]status groups[/url], instead of only in response to the specifically named statuses.[/color]
 [*]Honestly, this passive could still use a lot of work to be made truly viable outside of meme builds, but any changes may be better saved for a separate mod that's a little less concerned with balance.
 [/list]
 
@@ -106,7 +106,7 @@ In the base game, the Crocodile Aspect does two things: make you faster on wet s
 [size=3][b][color=#b6c38f]Aspect of the Beast: Wolverine[/color][/b][/size]
 
 [list]
-[*]Can no longer trigger on yourself or your allies.
+[*][color=#4db695]Can no longer trigger on yourself or your allies.[/color]
 [/list]
 
 [size=4][b][color=#e6bd72]Equipment[/color][/b][/size]
@@ -116,7 +116,7 @@ In the base game, the Crocodile Aspect does two things: make you faster on wet s
 Sort of unbelievably, this armor does literally nothing today. It has no passive or active effects whatsoever in the game's code.
 
 [list]
-[*]Grants 2 stacks of Wrath when entering Rage, and on each turn that your Rage continues.
+[*][color=#4db695]Grants 2 stacks of Wrath when entering Rage, and on each turn that your Rage continues.[/color]
 [*]Note that this deviates from the implementation in the [url=https://www.nexusmods.com/baldursgate3/mods/5595]Unofficial Bug Fixer[/url] mod, which only grants you Wrath when your turn starts. That fix is totally valid, but it means that this armor is completely useless on the first turn of any battle (unless you pre-casted Rage). Considering the importance of that first turn for encounters in this game, this feels like a significant gap.
 [/list]
 
