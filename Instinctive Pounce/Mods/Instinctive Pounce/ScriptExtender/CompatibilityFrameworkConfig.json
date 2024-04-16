@@ -8,9 +8,7 @@
                 {
                     "Action": "Insert",
                     "Type": "PassivesAdded",
-                    "Strings": [
-                        "RUI_InstinctivePounce"
-                    ],
+                    "Strings": ["CL_Passive_OneDnD_InstinctivePounce"],
                     "modGuid": "95bcb61e-0f77-4401-9a78-3952d7f2ff58"
                 }
             ]

@@ -1,3 +1,0 @@
-function RUI_IsInstinctivePounceJump()
-    return SpellCategoryIs(SpellCategory.Jump) & ~HasUseCosts('ActionPoint') & ~SpellId('Projectile_Fly')
-end
