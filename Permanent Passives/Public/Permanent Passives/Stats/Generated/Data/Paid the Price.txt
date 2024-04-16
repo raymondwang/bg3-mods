@@ -12,8 +12,8 @@ new entry "RUI_PaidThePrice"
 type "PassiveData"
 // Paid the Price
 data "DisplayName" "hf64ffcc1g6fabg4027gb033g2d56ce3ba990;2"
-// Auntie Ethel has kissed an eye and taken its sight.<br><br>Has a +[1] bonus to Intimidation <LSTag Tooltip="AbilityCheck">Checks</LSTag>, but can't make <LSTag Tooltip="CriticalHit">Critical Hits</LSTag> and has <LSTag Tooltip="Disadvantage">Disadvantage</LSTag> on Perception Checks.
-data "Description" "ha95a9598g2263g4930gba75g1a040070b967;8"
+// You have a +[1] bonus to Intimidation <LSTag Tooltip="AbilityCheck">Checks</LSTag>, but <LSTag Tooltip="Disadvantage">Disadvantage</LSTag> on Perception Checks. Additionally, you have Disadvantage when attacking Hags.
+data "Description" "hf8fbac04g7de1g47bfg9905gcf75bf282c40;13"
 data "DescriptionParams" "1"
 data "Icon" "Status_Hag_HagEyed"
 // Show in level up & character creation screens:
