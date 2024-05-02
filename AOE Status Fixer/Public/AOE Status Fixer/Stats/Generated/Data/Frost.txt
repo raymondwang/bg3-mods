@@ -1,4 +1,4 @@
-new entry "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
+new entry "RUI_FROST_GLOVES_PLACEHOLDER"
 type "StatusData"
 data "StatusType" "BOOST"
 // Encrusted with Frost
@@ -7,9 +7,22 @@ data "DisplayName" "h473dd343g566cg470cg9307g326ae34d7551;2"
 data "Description" "h7c465498g8068g4ebdga890gdd76e22fa263;14"
 data "DescriptionParams" "7;DealDamage(1d4, Cold)"
 data "Icon" "statIcons_Frost"
-data "StackId" "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
+data "StackId" "RUI_FROST_GLOVES_PLACEHOLDER"
 data "StackType" "Ignore"
 data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MAG_Frost_GenerateFrostOnDamage_Gloves_Passive"
+type "PassiveData"
+using "MAG_Frost_GenerateFrostOnDamage_Gloves_Passive"
+// This doesn't have an explicit OncePerAttack cooldown; instead, its conditions inadvertently limited applications to once per turn:
+data "Conditions" "IsDamageTypeCold() and not HasStatus('RUI_FROST_GLOVES_PLACEHOLDER', context.Target) and not Item()"
+data "StatsFunctors" "ApplyStatus(RUI_FROST_GLOVES_PLACEHOLDER, 100, 1)"
+
+new entry "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RUI_FROST_GLOVES_PLACEHOLDER"
+data "StackId" "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
 
 new entry "MAG_Frost_GenerateFrostOnStatusApply_Hat_Passive"
 type "PassiveData"
@@ -22,7 +35,7 @@ data "StatsFunctors" "ApplyStatus(RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE, 100, 
 new entry "RUI_FROST_MARKOHESHKIR_PLACEHOLDER"
 type "StatusData"
 data "StatusType" "BOOST"
-using "RUI_FROST_HAT_PLACEHOLDER_DO_NOT_REMOVE"
+using "RUI_FROST_GLOVES_PLACEHOLDER"
 data "StackId" "RUI_FROST_MARKOHESHKIR_PLACEHOLDER"
 
 new entry "MAG_Legendary_Chromatic_Frost_Passive"
