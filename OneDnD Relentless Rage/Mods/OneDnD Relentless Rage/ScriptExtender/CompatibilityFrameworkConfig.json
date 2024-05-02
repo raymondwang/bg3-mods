@@ -1,0 +1,24 @@
+{
+    "FileVersion": 1,
+    "Progressions": [
+        {
+            "Comment": "Barbarian Level 11",
+            "UUID": "37055929-9081-4337-831f-7ac427ef02fd",
+            "Strings": [
+                {
+                    "Action": "Remove",
+                    "Type": "PassivesAdded",
+                    "Strings": ["RelentlessRage"]
+                },
+                {
+                    "Action": "Insert",
+                    "Type": "PassivesAdded",
+                    "Strings": [
+                        "CL_Passive_OneDnD_RelentlessRage",
+                        "CL_Passive_OneDnD_RelentlessRage_ResetOnRest"
+                    ]
+                }
+            ]
+        }
+    ]
+}
