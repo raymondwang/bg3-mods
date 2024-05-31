@@ -1,0 +1,21 @@
+{
+    "FileVersion": 1,
+    "Progressions": [
+        {
+            "Comment": "Barbarian Level 9",
+            "UUID": "2b2be55c-8c01-4bcd-84ff-b4c9ca23faf8",
+            "Strings": [
+                {
+                    "Action": "Remove",
+                    "Type": "PassivesAdded",
+                    "Strings": ["BrutalCritical"]
+                },
+                {
+                    "Action": "Insert",
+                    "Type": "PassivesAdded",
+                    "Strings": ["CL_Passive_OneDnD_BrutalStrike"]
+                }
+            ]
+        }
+    ]
+}
